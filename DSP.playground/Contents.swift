@@ -3,3 +3,10 @@
 import UIKit
 
 var str = "Hello, playground"
+
+testFunction(number: 50)
+helper(number:50)
+
+func testFunction(number: Int) {
+    print(number + 1)
+}
