@@ -8,6 +8,4 @@
 import Foundation
 
 
-func helper(number: int) {
-    print(number + 5)
-}
+print("hello")
