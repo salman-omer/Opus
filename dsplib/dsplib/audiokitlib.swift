@@ -21,6 +21,19 @@ func audioKitTest() -> Void{
         AKLog("AudioKit did not start!")
     }
     
+    oscillator.amplitude = random(in: 0.5 ... 1)
+    oscillator.frequency = random(in: 220 ... 880)
+    oscillator.start()
+    oscillator2.amplitude = random(in: 0.5 ... 1)
+    oscillator2.frequency = random(in: 220 ... 880)
+    oscillator2.start()
+    
+    print("Waves \(Int(oscillator.frequency))Hz & \(Int(oscillator2.frequency))Hz playing")
+    sleep(1)
+    
+    oscillator.stop()
+    oscillator2.stop()
+    
     print("AudioKit test complete")
     
 }
