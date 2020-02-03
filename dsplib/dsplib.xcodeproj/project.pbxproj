@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		222CFB9E23E794BE00F75D5C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CFB9D23E794BE00F75D5C /* main.swift */; };
+		225A455A23E79DEF00EF85D4 /* audiokitlib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A455923E79DEF00EF85D4 /* audiokitlib.swift */; };
+		225A455C23E79F3D00EF85D4 /* dspscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A455B23E79F3D00EF85D4 /* dspscript.swift */; };
 		9AC45D4C42B9D2D4D40E4702 /* Pods_dsplib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAB9717F5DFFB4CC1393FA9 /* Pods_dsplib.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		0272A1D7F622BBC62B04D10F /* Pods-dsplib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsplib.debug.xcconfig"; path = "Target Support Files/Pods-dsplib/Pods-dsplib.debug.xcconfig"; sourceTree = "<group>"; };
 		222CFB9A23E794BE00F75D5C /* dsplib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dsplib; sourceTree = BUILT_PRODUCTS_DIR; };
 		222CFB9D23E794BE00F75D5C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		225A455923E79DEF00EF85D4 /* audiokitlib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audiokitlib.swift; sourceTree = "<group>"; };
+		225A455B23E79F3D00EF85D4 /* dspscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dspscript.swift; sourceTree = "<group>"; };
 		8F40154FA1B5951276313C9E /* Pods-dsplib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dsplib.release.xcconfig"; path = "Target Support Files/Pods-dsplib/Pods-dsplib.release.xcconfig"; sourceTree = "<group>"; };
 		FCAB9717F5DFFB4CC1393FA9 /* Pods_dsplib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsplib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				222CFB9D23E794BE00F75D5C /* main.swift */,
+				225A455923E79DEF00EF85D4 /* audiokitlib.swift */,
+				225A455B23E79F3D00EF85D4 /* dspscript.swift */,
 			);
 			path = dsplib;
 			sourceTree = "<group>";
@@ -83,7 +89,6 @@
 				0272A1D7F622BBC62B04D10F /* Pods-dsplib.debug.xcconfig */,
 				8F40154FA1B5951276313C9E /* Pods-dsplib.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				222CFB9E23E794BE00F75D5C /* main.swift in Sources */,
+				225A455A23E79DEF00EF85D4 /* audiokitlib.swift in Sources */,
+				225A455C23E79F3D00EF85D4 /* dspscript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
