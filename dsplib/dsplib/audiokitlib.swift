@@ -9,7 +9,7 @@
 import Foundation
 import AudioKit
 
-func audioKitTest() -> Void{
+func audioKitHelloWorld() -> Void{
     let oscillator = AKOscillator()
     let oscillator2 = AKOscillator()
     

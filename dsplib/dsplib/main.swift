@@ -3,4 +3,4 @@
 import Foundation
 
 dspTest()
-audioKitTest()
+audioKitHelloWorld()
