@@ -2,5 +2,7 @@
 
 import Foundation
 
-dspTest()
-audioKitHelloWorld()
+audioKitSetup()
+
+let result: [Double] = getAudioSample(iterations: 10000)
+print(result)

@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = AudioKit;
+			productName = AudioKit;
 		};
 /* End PBXAggregateTarget section */
 
@@ -91,7 +92,7 @@
 		911B1A0DC436504EFB15B4E48504DA61 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = macOS/AudioKitUI.framework; sourceTree = "<group>"; };
 		92EEB24ABB69F58CC91326F96921EFA0 /* Pods-dsplib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dsplib-umbrella.h"; sourceTree = "<group>"; };
 		9836E8A6F9E8980864ED29E1A1960A48 /* AKOfflineRenderAudioUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKOfflineRenderAudioUnit.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKOfflineRenderAudioUnit.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A01F7900B4C2B5EBD2DA2CE001885C4C /* AKAmplitudeTrackerAudioUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKAmplitudeTrackerAudioUnit.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKAmplitudeTrackerAudioUnit.h; sourceTree = "<group>"; };
 		A02C0565212943C91FED5D23E5709EB1 /* AKOperationEffectAudioUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKOperationEffectAudioUnit.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKOperationEffectAudioUnit.h; sourceTree = "<group>"; };
 		A15840CC41CE4E84867FD6C036293679 /* AKModulatedDelay_Typedefs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKModulatedDelay_Typedefs.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKModulatedDelay_Typedefs.h; sourceTree = "<group>"; };
@@ -100,7 +101,7 @@
 		B469273D802A185712FA682874DEB7E9 /* AKSporthStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSporthStack.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKSporthStack.h; sourceTree = "<group>"; };
 		B4A0B3BF5816B696C2072410A20488AE /* AKSequencerEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKSequencerEngine.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKSequencerEngine.h; sourceTree = "<group>"; };
 		C606C2013902FCAB1314566025D7522F /* AKFMOscillatorFilterSynthAudioUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKFMOscillatorFilterSynthAudioUnit.h; path = macOS/AudioKit.framework/Versions/A/Headers/AKFMOscillatorFilterSynthAudioUnit.h; sourceTree = "<group>"; };
-		C69FCAB48FD0989E24E6A882E0A5F30E /* Pods_dsplib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dsplib.framework; path = "Pods-dsplib.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69FCAB48FD0989E24E6A882E0A5F30E /* Pods_dsplib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dsplib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A0093A71D1761E4FC7701B3B96FF9F /* EZRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZRecorder.h; path = macOS/AudioKit.framework/Versions/A/Headers/EZRecorder.h; sourceTree = "<group>"; };
 		DCAC72A0A73149522C1E632E6949004D /* EZOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EZOutput.h; path = macOS/AudioKit.framework/Versions/A/Headers/EZOutput.h; sourceTree = "<group>"; };
 		E1DC09D6221887A45C825F3728DD2CB0 /* AudioEngineUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AudioEngineUnit.h; path = macOS/AudioKit.framework/Versions/A/Headers/AudioEngineUnit.h; sourceTree = "<group>"; };
@@ -172,7 +173,6 @@
 				A09252E647ABFE172EC964C5B4488981 /* Support Files */,
 				87DA42E8947FCD03F597880AFD1866C0 /* UI */,
 			);
-			name = AudioKit;
 			path = AudioKit;
 			sourceTree = "<group>";
 		};
@@ -362,7 +362,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -462,6 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-dsplib/Pods-dsplib-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -478,7 +479,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 540A7EC9992A93DC6A4F0D8E9A937D20 /* AudioKit.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -496,7 +496,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 540A7EC9992A93DC6A4F0D8E9A937D20 /* AudioKit.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -515,7 +514,6 @@
 			baseConfigurationReference = 503DE63450F5620E92381C4A657C222D /* Pods-dsplib.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -555,7 +553,6 @@
 			baseConfigurationReference = 36C5E6CB7665098B23390CDFE807E2C0 /* Pods-dsplib.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -641,6 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-dsplib/Pods-dsplib-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;

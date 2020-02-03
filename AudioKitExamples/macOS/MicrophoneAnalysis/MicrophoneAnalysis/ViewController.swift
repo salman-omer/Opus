@@ -48,6 +48,9 @@ class ViewController: NSViewController {
         super.viewDidAppear()
         AudioKit.output = silence
         do {
+            if let inputs = AudioKit.inputDevices {
+                print(inputs)
+            }
             try AudioKit.start()
         } catch {
             AKLog("AudioKit did not start!")
@@ -67,6 +70,7 @@ class ViewController: NSViewController {
     }
 
     @objc func updateUI() {
+        print(tracker.frequency)
         if tracker.amplitude > 0.1 {
             frequencyLabel.stringValue = String(format: "%0.1f", tracker.frequency)
 
