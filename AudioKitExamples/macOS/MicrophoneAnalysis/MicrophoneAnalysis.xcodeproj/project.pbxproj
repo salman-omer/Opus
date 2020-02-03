@@ -11,11 +11,15 @@
 		78D63E301D0FCDA300C53875 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D63E2F1D0FCDA300C53875 /* ViewController.swift */; };
 		78D63E321D0FCDA300C53875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D63E311D0FCDA300C53875 /* Assets.xcassets */; };
 		78D63E351D0FCDA300C53875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D63E331D0FCDA300C53875 /* Main.storyboard */; };
+		7D7C52A42B4AD743DBD2DD7E /* Pods_MicrophoneAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E8DC00CB5FBF82113516C7 /* Pods_MicrophoneAnalysis.framework */; };
 		C446B40B1D45576C000AEFCA /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C446B4091D455764000AEFCA /* AudioKit.framework */; };
 		EA2FA541215AFB9C001C210A /* AudioKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC9C5AB1F5028F300B01FF7 /* AudioKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B074EE683162C44A8D3BE97 /* Pods-MicrophoneAnalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrophoneAnalysis.debug.xcconfig"; path = "Target Support Files/Pods-MicrophoneAnalysis/Pods-MicrophoneAnalysis.debug.xcconfig"; sourceTree = "<group>"; };
+		498FB70465681C1449E785C6 /* Pods-MicrophoneAnalysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicrophoneAnalysis.release.xcconfig"; path = "Target Support Files/Pods-MicrophoneAnalysis/Pods-MicrophoneAnalysis.release.xcconfig"; sourceTree = "<group>"; };
+		55E8DC00CB5FBF82113516C7 /* Pods_MicrophoneAnalysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicrophoneAnalysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D63E2A1D0FCDA300C53875 /* MicrophoneAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicrophoneAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D63E2D1D0FCDA300C53875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D63E2F1D0FCDA300C53875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,18 +37,30 @@
 			files = (
 				C446B40B1D45576C000AEFCA /* AudioKit.framework in Frameworks */,
 				EA2FA541215AFB9C001C210A /* AudioKitUI.framework in Frameworks */,
+				7D7C52A42B4AD743DBD2DD7E /* Pods_MicrophoneAnalysis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261681D22F52653A9E0CF5BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B074EE683162C44A8D3BE97 /* Pods-MicrophoneAnalysis.debug.xcconfig */,
+				498FB70465681C1449E785C6 /* Pods-MicrophoneAnalysis.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		78D63E211D0FCDA300C53875 = {
 			isa = PBXGroup;
 			children = (
 				78D63E2C1D0FCDA300C53875 /* MicrophoneAnalysis */,
 				78D63E471D0FCF6700C53875 /* Frameworks */,
 				78D63E2B1D0FCDA300C53875 /* Products */,
+				261681D22F52653A9E0CF5BC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,7 @@
 			children = (
 				C446B4091D455764000AEFCA /* AudioKit.framework */,
 				EAC9C5AB1F5028F300B01FF7 /* AudioKitUI.framework */,
+				55E8DC00CB5FBF82113516C7 /* Pods_MicrophoneAnalysis.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78D63E391D0FCDA300C53875 /* Build configuration list for PBXNativeTarget "MicrophoneAnalysis" */;
 			buildPhases = (
+				36FA539A18C32EBFB74001F8 /* [CP] Check Pods Manifest.lock */,
 				78D63E261D0FCDA300C53875 /* Sources */,
 				78D63E271D0FCDA300C53875 /* Frameworks */,
 				78D63E281D0FCDA300C53875 /* Resources */,
@@ -142,6 +160,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36FA539A18C32EBFB74001F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MicrophoneAnalysis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		78D63E261D0FCDA300C53875 /* Sources */ = {
@@ -277,6 +320,7 @@
 		};
 		78D63E3A1D0FCDA300C53875 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B074EE683162C44A8D3BE97 /* Pods-MicrophoneAnalysis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -301,6 +345,7 @@
 		};
 		78D63E3B1D0FCDA300C53875 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498FB70465681C1449E785C6 /* Pods-MicrophoneAnalysis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
