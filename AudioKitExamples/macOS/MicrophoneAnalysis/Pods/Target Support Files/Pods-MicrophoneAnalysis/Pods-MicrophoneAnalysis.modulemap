@@ -1,6 +1,0 @@
-framework module Pods_MicrophoneAnalysis {
-  umbrella header "Pods-MicrophoneAnalysis-umbrella.h"
-
-  export *
-  module * { export * }
-}
