@@ -9,6 +9,7 @@
 import AudioKit
 import AudioKitUI
 import UIKit
+import Dispatch
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
     let noteFrequencies = [16.35, 17.32, 18.35, 19.45, 20.6, 21.83, 23.12, 24.5, 25.96, 27.5, 29.14, 30.87]
     let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
+    
+    let samplingFrequency = 16000
 
     func setupPlot() {
         let plot = AKNodeOutputPlot(mic, frame: audioInputPlot.bounds)
@@ -47,6 +50,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         AKSettings.audioInputEnabled = true
+        AKSettings.sampleRate = AudioKit.engine.inputNode.inputFormat(forBus: 0).sampleRate
+        
         mic = AKMicrophone()
         tracker = AKFrequencyTracker(mic)
         silence = AKBooster(tracker, gain: 0)
@@ -67,6 +72,85 @@ class ViewController: UIViewController {
                              selector: #selector(ViewController.updateUI),
                              userInfo: nil,
                              repeats: true)
+        Timer.scheduledTimer(timeInterval: 1/samplingFrequency,
+                             target: self,
+                             selector: #selector(processInputMethod2),
+                             userInfo: nil,
+                             repeats: true)
+    }
+    
+    
+    var seconds: Int = 0;
+    var initialTime: Double = 0
+    var timeList: [Double] = []
+    var list: [Double] = [];
+    var start = DispatchTime.now()
+    var end = DispatchTime.now()
+    
+    @objc func processInputMethod1() {
+        
+        list.append(tracker.amplitude)
+        if list.count == samplingFrequency {
+            end = DispatchTime.now()
+            
+            let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+            let timeInterval = Double(nanoTime) / 1_000_000_000
+            
+            if seconds == 0 {
+                initialTime = timeInterval
+            } else {
+                timeList.append(timeInterval)
+            }
+            
+            seconds = seconds + 1
+            if timeList.count == 60 {
+                let average = timeList.reduce(0, {res, val in res + val}) / timeList.count
+                print("Average processing time over \(timeList.count) seconds is \(average) (not including initial processing time")
+                print("Initial processing time is \(initialTime)")
+            
+            }
+            //print(list.count)
+            list = []
+            start = DispatchTime.now()
+            
+        }
+        
+    }
+    
+    var iterations = 0
+    
+    @objc func processInputMethod2() {
+        iterations = iterations + 1
+        if iterations == samplingFrequency {
+            end = DispatchTime.now()
+            
+            let nanoTime = end.uptimeNanoseconds - start.uptimeNanoseconds
+            let timeInterval = Double(nanoTime) / 1_000_000_000
+            
+            if seconds == 0 {
+                initialTime = timeInterval
+            } else {
+                timeList.append(timeInterval)
+            }
+            
+            seconds = seconds + 1
+            if timeList.count == 60 {
+                let average = timeList.reduce(0, {res, val in res + val}) / timeList.count
+                print("Average processing time over \(timeList.count) seconds is \(average) (not including initial processing time")
+                print("Initial processing time is \(initialTime)")
+            
+            }
+            
+            iterations = 0
+            
+            start = DispatchTime.now()
+            
+        }
+        list.append(tracker.amplitude)
+        if list.count > samplingFrequency {
+            list.removeFirst()
+        }
+        
     }
 
     @objc func updateUI() {
@@ -139,3 +223,5 @@ extension ViewController: InputDeviceDelegate {
     }
 
 }
+
+
