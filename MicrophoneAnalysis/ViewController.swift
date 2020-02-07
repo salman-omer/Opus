@@ -146,9 +146,9 @@ class ViewController: UIViewController {
             start = DispatchTime.now()
             
         }
-        list.append(tracker.amplitude)
-        if list.count > samplingFrequency {
-            list.removeFirst()
+        timeList.append(tracker.amplitude)
+        if timeList.count > samplingFrequency {
+            timeList.removeFirst()
         }
         
     }
