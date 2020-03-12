@@ -59,13 +59,19 @@ class AudioSampler {
     // MARK: - Start Listening
     func start() {
         audioEngine = AVAudioEngine()
+        
+        do {
+            try session.setCategory(AVAudioSession.Category.playAndRecord)
+            try session.setPreferredSampleRate(44100)
+            try session.setActive(true)
+        } catch {}
 
         guard let inputNode = audioEngine?.inputNode else {
             print("Input Node Missing")
             return
         }
         
-        let format = inputNode.outputFormat(forBus: bus)
+        let format = inputNode.inputFormat(forBus: bus)
         
         inputNode.installTap(onBus: bus, bufferSize: bufferSize, format: format) {
             [weak self] (buffer: AVAudioPCMBuffer!, time: AVAudioTime) in

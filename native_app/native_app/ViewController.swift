@@ -29,13 +29,11 @@ class ViewController: UIViewController {
     @IBAction func launchUnityView(_ sender: UIButton) {
         UnityEmbeddedSwift.showUnity()
         
-        Timer.scheduledTimer(timeInterval: 2,
-                            target: self,
-                            selector: #selector(updateCounting),
-                            userInfo: nil,
-                            repeats: true)
-        
+        CATransaction.begin()
         self.navigationController?.pushViewController(UnityEmbeddedSwift.getUnityRootview(), animated: true)
+        CATransaction.setCompletionBlock {
+            self.sampler?.start()
+        }
         
     }
     
@@ -48,7 +46,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         sampler = AudioSampler(onReceived: self.onAudioSampleReceived)
-        sampler?.start()
     }
 
 }
