@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AFC454F623810E4B0D0FA3A /* Pods_native_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C96C829FC38218C47395FD /* Pods_native_app.framework */; };
 		B361E6C923ABA5B4007863A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361E6C823ABA5B4007863A7 /* AppDelegate.swift */; };
 		B361E6CB23ABA5B4007863A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361E6CA23ABA5B4007863A7 /* SceneDelegate.swift */; };
 		B361E6CD23ABA5B4007863A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361E6CC23ABA5B4007863A7 /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 		B361E6E023ABA616007863A7 /* UnityEmbeddedSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361E6DF23ABA616007863A7 /* UnityEmbeddedSwift.swift */; };
 		B361E6E423ABA710007863A7 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B361E6E323ABA710007863A7 /* UnityFramework.framework */; };
 		B361E6E523ABA710007863A7 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B361E6E323ABA710007863A7 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4F448D9241A8640000581CF /* AudioSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F448D6241A863F000581CF /* AudioSampler.swift */; };
+		C4F448DA241A8640000581CF /* NoteDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F448D7241A863F000581CF /* NoteDetector.swift */; };
+		C4F448DB241A8640000581CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F448D8241A8640000581CF /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +49,12 @@
 		B361E6D923ABA5B5007863A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B361E6DF23ABA616007863A7 /* UnityEmbeddedSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityEmbeddedSwift.swift; sourceTree = "<group>"; };
 		B361E6E323ABA710007863A7 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C96C829FC38218C47395FD /* Pods_native_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_native_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD216DA1B71BF33B48CC5EA7 /* Pods-native_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native_app.debug.xcconfig"; path = "Target Support Files/Pods-native_app/Pods-native_app.debug.xcconfig"; sourceTree = "<group>"; };
+		C4F448D6241A863F000581CF /* AudioSampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSampler.swift; sourceTree = "<group>"; };
+		C4F448D7241A863F000581CF /* NoteDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetector.swift; sourceTree = "<group>"; };
+		C4F448D8241A8640000581CF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D55CD498F7364E08F83FB3FC /* Pods-native_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-native_app.release.xcconfig"; path = "Target Support Files/Pods-native_app/Pods-native_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,18 +63,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B361E6E423ABA710007863A7 /* UnityFramework.framework in Frameworks */,
+				0AFC454F623810E4B0D0FA3A /* Pods_native_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51263683A7D91C99F724554A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD216DA1B71BF33B48CC5EA7 /* Pods-native_app.debug.xcconfig */,
+				D55CD498F7364E08F83FB3FC /* Pods-native_app.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		B361E6BC23ABA5B4007863A7 = {
 			isa = PBXGroup;
 			children = (
 				B361E6C723ABA5B4007863A7 /* native_app */,
 				B361E6C623ABA5B4007863A7 /* Products */,
 				B361E6E223ABA710007863A7 /* Frameworks */,
+				51263683A7D91C99F724554A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +101,9 @@
 		B361E6C723ABA5B4007863A7 /* native_app */ = {
 			isa = PBXGroup;
 			children = (
+				C4F448D6241A863F000581CF /* AudioSampler.swift */,
+				C4F448D7241A863F000581CF /* NoteDetector.swift */,
+				C4F448D8241A8640000581CF /* Utils.swift */,
 				B361E6C823ABA5B4007863A7 /* AppDelegate.swift */,
 				B361E6CA23ABA5B4007863A7 /* SceneDelegate.swift */,
 				B361E6CC23ABA5B4007863A7 /* ViewController.swift */,
@@ -96,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B361E6E323ABA710007863A7 /* UnityFramework.framework */,
+				B8C96C829FC38218C47395FD /* Pods_native_app.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,10 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B361E6DC23ABA5B5007863A7 /* Build configuration list for PBXNativeTarget "native_app" */;
 			buildPhases = (
+				1C936FA55AEAC72547A1A996 /* [CP] Check Pods Manifest.lock */,
 				B361E6C123ABA5B4007863A7 /* Sources */,
 				B361E6C223ABA5B4007863A7 /* Frameworks */,
 				B361E6C323ABA5B4007863A7 /* Resources */,
 				B361E6E623ABA710007863A7 /* Embed Frameworks */,
+				DCFB09EE508BF355DFA8BD70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,16 +195,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C936FA55AEAC72547A1A996 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-native_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCFB09EE508BF355DFA8BD70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-native_app/Pods-native_app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-native_app/Pods-native_app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-native_app/Pods-native_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B361E6C123ABA5B4007863A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B361E6CD23ABA5B4007863A7 /* ViewController.swift in Sources */,
+				C4F448D9241A8640000581CF /* AudioSampler.swift in Sources */,
 				B361E6E023ABA616007863A7 /* UnityEmbeddedSwift.swift in Sources */,
 				B361E6C923ABA5B4007863A7 /* AppDelegate.swift in Sources */,
 				B361E6D323ABA5B4007863A7 /* native_app.xcdatamodeld in Sources */,
+				C4F448DA241A8640000581CF /* NoteDetector.swift in Sources */,
 				B361E6CB23ABA5B4007863A7 /* SceneDelegate.swift in Sources */,
+				C4F448DB241A8640000581CF /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,10 +391,11 @@
 		};
 		B361E6DD23ABA5B5007863A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD216DA1B71BF33B48CC5EA7 /* Pods-native_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4B964F8L92;
+				DEVELOPMENT_TEAM = WCWZ78BM9X;
 				INFOPLIST_FILE = native_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,10 +410,11 @@
 		};
 		B361E6DE23ABA5B5007863A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55CD498F7364E08F83FB3FC /* Pods-native_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4B964F8L92;
+				DEVELOPMENT_TEAM = WCWZ78BM9X;
 				INFOPLIST_FILE = native_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

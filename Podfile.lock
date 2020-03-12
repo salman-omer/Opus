@@ -1,0 +1,16 @@
+PODS:
+  - Pitchy (3.0.0)
+
+DEPENDENCIES:
+  - Pitchy
+
+SPEC REPOS:
+  trunk:
+    - Pitchy
+
+SPEC CHECKSUMS:
+  Pitchy: 15407e4425b6d88fa3e7eef8927ba659fab52d7a
+
+PODFILE CHECKSUM: fa16ca49778bb224858adb445ae7d213318ec136
+
+COCOAPODS: 1.8.4

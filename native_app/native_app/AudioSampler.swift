@@ -42,7 +42,7 @@ class AudioSampler {
     
     // MARK: - Buffer Size
     // The following value can be adjusted to increase or decrease audio frame count.
-    private let bufferSize: AVAudioFrameCount = 4096
+    private let bufferSize: AVAudioFrameCount = 11025
     
     private var levelThreshold : Float?
     private var audioChannel: AVCaptureAudioChannel?

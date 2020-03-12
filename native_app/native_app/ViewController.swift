@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Pitchy
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,9 @@ class ViewController: UIViewController {
         if(meetsPowerThreshold) {
             do {
                 let frequency = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
-                print("Frequency: \(frequency)")
+                let pitch = try Pitch(frequency: Double(frequency))
+                
+                print("Note: \(pitch.offsets.closest.note.string), Frequency: \(frequency)")
             } catch {}
         }
     }
