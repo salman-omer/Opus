@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     var timer = Timer()
+    var sampler: AudioSampler?
+    
+    func onAudioSampleReceived(buffer: Buffer, time: AVAudioTime, meetsPowerThreshold: Bool) {
+        if(meetsPowerThreshold) {
+            do {
+                let frequency = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
+                print("Frequency: \(frequency)")
+            } catch {}
+        }
+    }
     
     @IBAction func launchUnityView(_ sender: UIButton) {
         UnityEmbeddedSwift.showUnity()
@@ -33,8 +44,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        sampler = AudioSampler(onReceived: self.onAudioSampleReceived)
+        sampler?.start()
     }
 
-
 }
-
