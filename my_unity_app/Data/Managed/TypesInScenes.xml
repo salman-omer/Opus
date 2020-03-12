@@ -54,9 +54,14 @@
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="camera_controller" preserve="nothing"/>
+		<type fullname="forest_level_controller" preserve="nothing"/>
+		<type fullname="ghost_controller" preserve="nothing"/>
+		<type fullname="halo_controller" preserve="nothing"/>
 		<type fullname="level_controller" preserve="nothing"/>
+		<type fullname="parallax" preserve="nothing"/>
 		<type fullname="player_controller" preserve="nothing"/>
 		<type fullname="transition" preserve="nothing"/>
+		<type fullname="w2_player_controller" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
@@ -66,8 +71,5 @@
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="com.unity.multiplayer-hlapi.Runtime">
-		<type fullname="UnityEngine.Networking.NetworkCallbacks" preserve="nothing"/>
 	</assembly>
 </linker>

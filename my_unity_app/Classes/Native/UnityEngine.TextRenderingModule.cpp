@@ -145,7 +145,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m31FA26D4722DE7042587E4FDA499F
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m4B9E13C91ADA643CE531D7FE21CBC0BD4B8CFAC8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m9616B19521FA2ACBD7DAB484CA3DFA1283D8C9DD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const uint32_t Font_InvokeTextureRebuilt_Internal_m2D4C9D99B6137EF380A19EC72D6EE8CBFF7B4062_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t Font__ctor_m0EB492A9B2082EEE21587ED01866DE1ED4C1E628_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Font_add_textureRebuilt_m031EFCD3B164273920B133A8689C18ED87C9B18F_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Font_remove_textureRebuilt_mBEF163DAE27CA126D400646E850AAEE4AE8DAAB4_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t TextGenerationSettings_CompareColors_m41313F2A332F5780C5BD6F8134EBB14473CC5C66_MetadataUsageId;
@@ -2351,10 +2350,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m9616B19521FA2ACBD7DAB484CA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t * Delegate_Combine_mC25D2F7DECAFBA6D9A2F9EBA8A77063F0658ECF1 (Delegate_t * ___a0, Delegate_t * ___b1, const RuntimeMethod* method);
 // System.Delegate System.Delegate::Remove(System.Delegate,System.Delegate)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t * Delegate_Remove_m0B0DB7D1B3AF96B71AFAA72BA0EFE32FBBC2932D (Delegate_t * ___source0, Delegate_t * ___value1, const RuntimeMethod* method);
-// System.Void UnityEngine.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m091EBAEBC7919B0391ABDAFB7389ADC12206525B (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Font::Internal_CreateFont(UnityEngine.Font,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Font_Internal_CreateFont_m1B4B34CFCE6782196D19DB5020CB4C4CEFFFC05E (Font_t1EDE54AF557272BE314EB4B40EFA50CEB353CA26 * ___self0, String_t* ___name1, const RuntimeMethod* method);
 // System.Void System.Action`1<UnityEngine.Font>::Invoke(!0)
 inline void Action_1_Invoke_mC307FDDD4FEA6818EE9A27D962C2C512B835DAEB (Action_1_t795662E553415ECF2DD0F8EEB9BA170C3670F37C * __this, Font_t1EDE54AF557272BE314EB4B40EFA50CEB353CA26 * ___obj0, const RuntimeMethod* method)
 {
@@ -2582,22 +2577,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Font_get_fontSize_m75A71EFC3D6483AD1A
 	int32_t retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
-// System.Void UnityEngine.Font::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Font__ctor_m0EB492A9B2082EEE21587ED01866DE1ED4C1E628 (Font_t1EDE54AF557272BE314EB4B40EFA50CEB353CA26 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (Font__ctor_m0EB492A9B2082EEE21587ED01866DE1ED4C1E628_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		Object__ctor_m091EBAEBC7919B0391ABDAFB7389ADC12206525B(__this, /*hidden argument*/NULL);
-		Font_Internal_CreateFont_m1B4B34CFCE6782196D19DB5020CB4C4CEFFFC05E(__this, (String_t*)NULL, /*hidden argument*/NULL);
-		return;
-	}
-}
 // System.Void UnityEngine.Font::InvokeTextureRebuilt_Internal(UnityEngine.Font)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Font_InvokeTextureRebuilt_Internal_m2D4C9D99B6137EF380A19EC72D6EE8CBFF7B4062 (Font_t1EDE54AF557272BE314EB4B40EFA50CEB353CA26 * ___font0, const RuntimeMethod* method)
 {
@@ -2686,15 +2665,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Font_HasCharacter_m59FF574F1E4A2F9807CCF
 	_il2cpp_icall_func = (Font_HasCharacter_m59FF574F1E4A2F9807CCF0C5D56C29E68D514D51_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Font::HasCharacter(System.Int32)");
 	bool retVal = _il2cpp_icall_func(__this, ___c0);
 	return retVal;
-}
-// System.Void UnityEngine.Font::Internal_CreateFont(UnityEngine.Font,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Font_Internal_CreateFont_m1B4B34CFCE6782196D19DB5020CB4C4CEFFFC05E (Font_t1EDE54AF557272BE314EB4B40EFA50CEB353CA26 * ___self0, String_t* ___name1, const RuntimeMethod* method)
-{
-	typedef void (*Font_Internal_CreateFont_m1B4B34CFCE6782196D19DB5020CB4C4CEFFFC05E_ftn) (Font_t1EDE54AF557272BE314EB4B40EFA50CEB353CA26 *, String_t*);
-	static Font_Internal_CreateFont_m1B4B34CFCE6782196D19DB5020CB4C4CEFFFC05E_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Font_Internal_CreateFont_m1B4B34CFCE6782196D19DB5020CB4C4CEFFFC05E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Font::Internal_CreateFont(UnityEngine.Font,System.String)");
-	_il2cpp_icall_func(___self0, ___name1);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

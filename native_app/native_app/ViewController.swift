@@ -19,9 +19,10 @@ class ViewController: UIViewController {
         if(meetsPowerThreshold) {
             do {
                 let frequency = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
-                let pitch = try Pitch(frequency: Double(frequency))
+                let note = try Note(frequency: Double(frequency))
+                let message = "Note: \(note.string) LowerNote: \(try note.lower().string) HigherNote: \(try note.higher().string)"
                 
-                print("Note: \(pitch.offsets.closest.note.string), Frequency: \(frequency)")
+                UnityEmbeddedSwift.sendUnityMessage("level_controller", methodName: "_processFrequencyData", message: message)
             } catch {}
         }
     }
