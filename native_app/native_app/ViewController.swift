@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController!.isNavigationBarHidden = true;
         
+        
         // Do any additional setup after loading the view.
         sampler = AudioSampler(onReceived: self.onAudioSampleReceived)
         
