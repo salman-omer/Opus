@@ -45,8 +45,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.isNavigationBarHidden = true;
+        
         // Do any additional setup after loading the view.
         sampler = AudioSampler(onReceived: self.onAudioSampleReceived)
+        
+        UnityEmbeddedSwift.showUnity()
+        
+        CATransaction.begin()
+        self.navigationController?.pushViewController(UnityEmbeddedSwift.getUnityRootview(), animated: true)
+        CATransaction.setCompletionBlock {
+            self.sampler?.start()
+        }
     }
 
 }
