@@ -27,17 +27,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func launchUnityView(_ sender: UIButton) {
-        UnityEmbeddedSwift.showUnity()
-        
-        CATransaction.begin()
-        self.navigationController?.pushViewController(UnityEmbeddedSwift.getUnityRootview(), animated: true)
-        CATransaction.setCompletionBlock {
-            self.sampler?.start()
-        }
-        
-    }
-    
     @objc func updateCounting(){
         print("sending message")
         UnityEmbeddedSwift.sendUnityMessage("level_controller", methodName: "_processFrequencyData", message: "Hello this is the message")
@@ -45,7 +34,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.isNavigationBarHidden = true;
+        self.navigationController?.isNavigationBarHidden = true;
         
         
         // Do any additional setup after loading the view.
@@ -54,7 +43,13 @@ class ViewController: UIViewController {
         UnityEmbeddedSwift.showUnity()
         
         CATransaction.begin()
+        // Below is some transition code that I tried to use but it didnt work for some reason
+//        let transition:CATransition = CATransition()
+//        transition.duration = 0.5
+//        transition.type = CATransitionType.fade
+//        self.navigationController?.view.layer.add(transition, forKey: nil)
         self.navigationController?.pushViewController(UnityEmbeddedSwift.getUnityRootview(), animated: true)
+        
         CATransaction.setCompletionBlock {
             self.sampler?.start()
         }
