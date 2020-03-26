@@ -21,7 +21,7 @@ IL2CPP_EXTERN_C_END
 
 
 extern const Il2CppMethodSpec g_Il2CppMethodSpecTable[];
-const Il2CppMethodSpec g_Il2CppMethodSpecTable[9827] = 
+const Il2CppMethodSpec g_Il2CppMethodSpecTable[9828] = 
 {
 	{ 0, 0, -1 } /* System.Void <>f__AnonymousType0`1<System.Object>::.ctor(<message>j__TPar) */,
 	{ 1, 0, -1 } /* System.Boolean <>f__AnonymousType0`1<System.Object>::Equals(System.Object) */,
@@ -2106,6 +2106,7 @@ const Il2CppMethodSpec g_Il2CppMethodSpecTable[9827] =
 	{ 8845, 807, -1 } /* !0 System.Collections.Generic.List`1<Scale_Enemy>::get_Item(System.Int32) */,
 	{ 8850, 807, -1 } /* System.Void System.Collections.Generic.List`1<Scale_Enemy>::Add(!0) */,
 	{ 8837, 807, -1 } /* System.Void System.Collections.Generic.List`1<Scale_Enemy>::.ctor() */,
+	{ 11027, -1, 599 } /* !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Camera>() */,
 	{ 512, -1, 1060 } /* R System.Array::UnsafeMov<System.Int32Enum,System.Int32>(S) */,
 	{ 461, -1, 15 } /* System.Boolean System.Array::InternalArray__ICollection_Contains<Mono.Globalization.Unicode.CodePointIndexer/TableRange>(T) */,
 	{ 461, -1, 41 } /* System.Boolean System.Array::InternalArray__ICollection_Contains<System.Boolean>(T) */,
