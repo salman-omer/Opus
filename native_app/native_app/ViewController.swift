@@ -20,13 +20,18 @@ class ViewController: UIViewController {
             do {
                 let frequency = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
                 let note = try Note(frequency: Double(frequency))
-                let message = "Note: \(note.string) LowerNote: \(try note.lower().string) HigherNote: \(try note.higher().string)"
-                
-                print(message)
+                let message = "Note: \(note.string) LowerNote: \(try note.lower().string) HigherNote: \(try note.higher().string) Time: \(printDate())"
                 
                 UnityEmbeddedSwift.sendUnityMessage("level_controller", methodName: "_processFrequencyData", message: message)
             } catch {}
         }
+    }
+    
+    func printDate() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss.SSSS"
+        return formatter.string(from: date)
     }
     
     func launchUnityView() {
@@ -47,6 +52,8 @@ class ViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         sampler = AudioSampler(onReceived: self.onAudioSampleReceived)
+        // For some reason we need to call the sampler start twice? Don't remove this
+        // one or the one in launchUnityView()
         self.sampler?.start()
         print("DEBUG: Sampler started upon app open");
         launchUnityView();

@@ -53,7 +53,8 @@
 		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="camera_controller" preserve="nothing"/>
+		<type fullname="World1CameraController" preserve="nothing"/>
+		<type fullname="World_2_Camera_Controller" preserve="nothing"/>
 		<type fullname="forest_level_controller" preserve="nothing"/>
 		<type fullname="ghost_controller" preserve="nothing"/>
 		<type fullname="global_transition" preserve="nothing"/>

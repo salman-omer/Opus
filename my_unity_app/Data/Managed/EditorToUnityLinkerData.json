@@ -256,6 +256,7 @@
             "usedInScenes": [
                 "Assets/Main Menu/Main_Menu.unity",
                 "Assets/World 1/music_level_prototype.unity",
+                "Assets/World 2/World 2.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -636,7 +637,14 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "camera_controller",
+            "fullManagedTypeName": "World1CameraController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "World_2_Camera_Controller",
             "moduleName": "",
             "usedInScenes": []
         },

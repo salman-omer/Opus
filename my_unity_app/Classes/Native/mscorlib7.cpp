@@ -29607,6 +29607,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Math_Abs_mF0B5B265075406BE063F1D0E561DC
 {
 	return fabsf(___value0);
 }
+// System.Double System.Math::Abs(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Abs_m7994C39FCBDC03DD2858BD906A2535BE997AE2B1 (double ___value0)
+{
+	return fabs(___value0);
+}
 // System.Int32 System.Math::Max(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Max_mA99E48BB021F2E4B62D4EA9F52EA6928EED618A2 (int32_t ___val10, int32_t ___val21, const RuntimeMethod* method)
 {
