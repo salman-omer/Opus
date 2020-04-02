@@ -170,47 +170,143 @@ extern void halo_controller_SetAnimationFrame_m5108C0AC129F44D8A286524129217C413
 extern void halo_controller_DamagePlayer_m5951B405AC46B3232C0A4DAC5493CC9A508D4FD9 ();
 // 0x0000004B System.Void halo_controller::.ctor()
 extern void halo_controller__ctor_mE1696E3DDFAD14F2AD7A2EFF1671B61C6BFC3389 ();
-// 0x0000004C System.Void w2_player_controller::Start()
-extern void w2_player_controller_Start_mBAACA1FC5F5813B5EBE2866872FC6740FB970FCD ();
-// 0x0000004D System.Void w2_player_controller::Update()
+// 0x0000004C System.Void w2_player_controller::Update()
 extern void w2_player_controller_Update_mFC1DA33297F9AB6B47407AD92DFBE32DD71576C8 ();
-// 0x0000004E System.Void w2_player_controller::.ctor()
+// 0x0000004D System.Void w2_player_controller::.ctor()
 extern void w2_player_controller__ctor_mD386EE50DC63689C32C077B015E0B4331732B579 ();
-// 0x0000004F System.Void global_transition::World_One_Transition()
+// 0x0000004E System.Void desert_level_controller::Start()
+extern void desert_level_controller_Start_m4E5FB4DEDF72E4D28E1A3DB1D13F7519B641E187 ();
+// 0x0000004F System.Collections.IEnumerator desert_level_controller::SandstormCoroutine()
+extern void desert_level_controller_SandstormCoroutine_m4F975657A451BDF96F8C2B06D412A88B87316CD9 ();
+// 0x00000050 System.Collections.IEnumerator desert_level_controller::ShakeCamera(System.Single,System.Int32)
+extern void desert_level_controller_ShakeCamera_m2EB6C3CCF51CBF06B62C4D8281AB627928956D80 ();
+// 0x00000051 System.Collections.IEnumerator desert_level_controller::SpawnEnemy()
+extern void desert_level_controller_SpawnEnemy_m80611A3BE7966F5425AE52F0A428D089B5DE164E ();
+// 0x00000052 System.Void desert_level_controller::shakeCamera(System.Single,System.Int32)
+extern void desert_level_controller_shakeCamera_m6EA32F30EE45EC6150B625DCA81C60740A943136 ();
+// 0x00000053 System.Void desert_level_controller::hurtEnemy()
+extern void desert_level_controller_hurtEnemy_m84771EB339B91C27A6EB8B3DF0432ACF2E66BB22 ();
+// 0x00000054 System.Void desert_level_controller::Update()
+extern void desert_level_controller_Update_m64423D40F61BBA89322C34EFCA59205DC15DCC0E ();
+// 0x00000055 System.Void desert_level_controller::startSandstorm()
+extern void desert_level_controller_startSandstorm_mAB19852518F5673FE9CB385D4F8266DAD3C5E752 ();
+// 0x00000056 System.Void desert_level_controller::.ctor()
+extern void desert_level_controller__ctor_m99DDBE936F60D09C444F1FDF3F6EF859546E1C3E ();
+// 0x00000057 System.Void desert_level_controller::.cctor()
+extern void desert_level_controller__cctor_mD928ABC534710ADD01E5379E210E88D1CDFF1B02 ();
+// 0x00000058 System.Void pyramid_enemy_controller::Start()
+extern void pyramid_enemy_controller_Start_m533FC5961FCDCE0C0CFEA04A8F503253238393CA ();
+// 0x00000059 System.Void pyramid_enemy_controller::SpawnInfo()
+extern void pyramid_enemy_controller_SpawnInfo_m76E5A924E875DD461C7C4919B47E6B2701CC2BA1 ();
+// 0x0000005A System.Void pyramid_enemy_controller::CleanUpAssets()
+extern void pyramid_enemy_controller_CleanUpAssets_mFA34B41E23B090298857C62329A1B77E86201E77 ();
+// 0x0000005B System.Boolean pyramid_enemy_controller::Hurt()
+extern void pyramid_enemy_controller_Hurt_m7DCE48C987D048A72A742686AFDF1033C7120521 ();
+// 0x0000005C System.Void pyramid_enemy_controller::UpdateTextInfo()
+extern void pyramid_enemy_controller_UpdateTextInfo_mA70FAA0AEB40B1FBA0C12A35C76152A471A2AC03 ();
+// 0x0000005D System.Void pyramid_enemy_controller::OnCollisionEnter2D(UnityEngine.Collision2D)
+extern void pyramid_enemy_controller_OnCollisionEnter2D_mB418CC39616728BC894A12EBDAEB69964C6D3CD8 ();
+// 0x0000005E System.Collections.IEnumerator pyramid_enemy_controller::FillUpHealthBar()
+extern void pyramid_enemy_controller_FillUpHealthBar_mFE203CF46C1DE4D71FA9B175B7AE51543C5AB51F ();
+// 0x0000005F System.Void pyramid_enemy_controller::SetAnimationFrame()
+extern void pyramid_enemy_controller_SetAnimationFrame_m04096D1FD0B992FB37CD763677C42918AF049202 ();
+// 0x00000060 System.Void pyramid_enemy_controller::.ctor()
+extern void pyramid_enemy_controller__ctor_mC44FFCCDFB58F1FEE98E1F96791BCD4FE0D5D80E ();
+// 0x00000061 System.Void pyramid_enemy_controller::.cctor()
+extern void pyramid_enemy_controller__cctor_mFF46D0DABEE04D9C4F2F25BD477C76068EF76023 ();
+// 0x00000062 System.Void world_3_parallax::Start()
+extern void world_3_parallax_Start_m748995397835F060A40D470E0F88C1DB41AC01AA ();
+// 0x00000063 System.Void world_3_parallax::Update()
+extern void world_3_parallax_Update_m5942EAD9377F719600BB50030DDAD80DE884FF32 ();
+// 0x00000064 System.Void world_3_parallax::.ctor()
+extern void world_3_parallax__ctor_mB0D515A8F344AEC487F37796A65AA73A8F7ACAE1 ();
+// 0x00000065 System.Void world_3_player_controller::Update()
+extern void world_3_player_controller_Update_m82662C3E206F0FCB18B4E4E741DC1C0948376466 ();
+// 0x00000066 System.Void world_3_player_controller::.ctor()
+extern void world_3_player_controller__ctor_m84152703CBF4BB4E4382278934C87C9320D7C1B5 ();
+// 0x00000067 System.Void global_transition::World_One_Transition()
 extern void global_transition_World_One_Transition_mAC14D1B755CC755FA5101CDEE7DC70880F18AEF6 ();
-// 0x00000050 System.Void global_transition::.ctor()
+// 0x00000068 System.Void global_transition::.ctor()
 extern void global_transition__ctor_m0C64CC23A421FAF50729883AA430EED117041B03 ();
-// 0x00000051 System.Void victory_screen_exit_general::Start()
+// 0x00000069 System.Void victory_screen_exit_general::Start()
 extern void victory_screen_exit_general_Start_m554B042416135376E839E6981F0E1BFC87FE53AA ();
-// 0x00000052 System.Void victory_screen_exit_general::Update()
+// 0x0000006A System.Void victory_screen_exit_general::Update()
 extern void victory_screen_exit_general_Update_m7A0D9522CC6977AB6F3330FA4890E27D03C28491 ();
-// 0x00000053 System.Void victory_screen_exit_general::.ctor()
+// 0x0000006B System.Void victory_screen_exit_general::.ctor()
 extern void victory_screen_exit_general__ctor_m3B63F22B5228F42BAD7F5B9ECFDEB87D49123E9F ();
-// 0x00000054 System.Void World1CameraController_<ShakeCamera>d__4::.ctor(System.Int32)
+// 0x0000006C System.Void World1CameraController_<ShakeCamera>d__4::.ctor(System.Int32)
 extern void U3CShakeCameraU3Ed__4__ctor_m38440586A67B20F415E7935695854898AD64FB8E ();
-// 0x00000055 System.Void World1CameraController_<ShakeCamera>d__4::System.IDisposable.Dispose()
+// 0x0000006D System.Void World1CameraController_<ShakeCamera>d__4::System.IDisposable.Dispose()
 extern void U3CShakeCameraU3Ed__4_System_IDisposable_Dispose_m0A4FA6597C10B1A39F4EB3A71E15C8922E1CBC85 ();
-// 0x00000056 System.Boolean World1CameraController_<ShakeCamera>d__4::MoveNext()
+// 0x0000006E System.Boolean World1CameraController_<ShakeCamera>d__4::MoveNext()
 extern void U3CShakeCameraU3Ed__4_MoveNext_m7CE1CC79A474C606B5459D0A586AB1F2DDEC73BE ();
-// 0x00000057 System.Object World1CameraController_<ShakeCamera>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000006F System.Object World1CameraController_<ShakeCamera>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CShakeCameraU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m90A5E5B1C903D619C85C44194B08EC4B550B1D25 ();
-// 0x00000058 System.Void World1CameraController_<ShakeCamera>d__4::System.Collections.IEnumerator.Reset()
+// 0x00000070 System.Void World1CameraController_<ShakeCamera>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CShakeCameraU3Ed__4_System_Collections_IEnumerator_Reset_m247A8E7DD91E85761332B95E0DEA534FE6DB9ABD ();
-// 0x00000059 System.Object World1CameraController_<ShakeCamera>d__4::System.Collections.IEnumerator.get_Current()
+// 0x00000071 System.Object World1CameraController_<ShakeCamera>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CShakeCameraU3Ed__4_System_Collections_IEnumerator_get_Current_mCED13FD8E1309F4166AB56D8BF3244F702BFAAA0 ();
-// 0x0000005A System.Void World_2_Camera_Controller_<ShakeCamera>d__4::.ctor(System.Int32)
+// 0x00000072 System.Void World_2_Camera_Controller_<ShakeCamera>d__4::.ctor(System.Int32)
 extern void U3CShakeCameraU3Ed__4__ctor_m07ED9A23B05A37EAAAF909E7AA2AC1CD4C915A01 ();
-// 0x0000005B System.Void World_2_Camera_Controller_<ShakeCamera>d__4::System.IDisposable.Dispose()
+// 0x00000073 System.Void World_2_Camera_Controller_<ShakeCamera>d__4::System.IDisposable.Dispose()
 extern void U3CShakeCameraU3Ed__4_System_IDisposable_Dispose_m6B773C5313772F915CAA927AC9EAE2EC6B0CEA55 ();
-// 0x0000005C System.Boolean World_2_Camera_Controller_<ShakeCamera>d__4::MoveNext()
+// 0x00000074 System.Boolean World_2_Camera_Controller_<ShakeCamera>d__4::MoveNext()
 extern void U3CShakeCameraU3Ed__4_MoveNext_mD31ED2E2BADA4F6E7A814C04BE448F90693A052E ();
-// 0x0000005D System.Object World_2_Camera_Controller_<ShakeCamera>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000075 System.Object World_2_Camera_Controller_<ShakeCamera>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CShakeCameraU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m350B56D827EE9D845D34D4345B68454006EBC4B9 ();
-// 0x0000005E System.Void World_2_Camera_Controller_<ShakeCamera>d__4::System.Collections.IEnumerator.Reset()
+// 0x00000076 System.Void World_2_Camera_Controller_<ShakeCamera>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CShakeCameraU3Ed__4_System_Collections_IEnumerator_Reset_m0C4183259A234DBED25549E95B7758BC13317D20 ();
-// 0x0000005F System.Object World_2_Camera_Controller_<ShakeCamera>d__4::System.Collections.IEnumerator.get_Current()
+// 0x00000077 System.Object World_2_Camera_Controller_<ShakeCamera>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CShakeCameraU3Ed__4_System_Collections_IEnumerator_get_Current_m1349038CA54799B54B439816DEDFED132B5D76BB ();
-static Il2CppMethodPointer s_methodPointers[95] = 
+// 0x00000078 System.Void desert_level_controller_<SandstormCoroutine>d__17::.ctor(System.Int32)
+extern void U3CSandstormCoroutineU3Ed__17__ctor_mD08CC34A3238152866018C7A0420E8F828184372 ();
+// 0x00000079 System.Void desert_level_controller_<SandstormCoroutine>d__17::System.IDisposable.Dispose()
+extern void U3CSandstormCoroutineU3Ed__17_System_IDisposable_Dispose_m29050E425D5E4623EE86A3B6348B3E78E3ADAA05 ();
+// 0x0000007A System.Boolean desert_level_controller_<SandstormCoroutine>d__17::MoveNext()
+extern void U3CSandstormCoroutineU3Ed__17_MoveNext_m69035F37423C7755F102A97117CF101663A69DE1 ();
+// 0x0000007B System.Object desert_level_controller_<SandstormCoroutine>d__17::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CSandstormCoroutineU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0BF9021F1E1EEB4B2ADE5D214F0432DEC80D66AB ();
+// 0x0000007C System.Void desert_level_controller_<SandstormCoroutine>d__17::System.Collections.IEnumerator.Reset()
+extern void U3CSandstormCoroutineU3Ed__17_System_Collections_IEnumerator_Reset_m8DB9570E172D594A58B53D198AF5A6DDAB78C5BC ();
+// 0x0000007D System.Object desert_level_controller_<SandstormCoroutine>d__17::System.Collections.IEnumerator.get_Current()
+extern void U3CSandstormCoroutineU3Ed__17_System_Collections_IEnumerator_get_Current_m7EB125BB105F37EF33AC0BC769B78FBBFE9D73A7 ();
+// 0x0000007E System.Void desert_level_controller_<ShakeCamera>d__18::.ctor(System.Int32)
+extern void U3CShakeCameraU3Ed__18__ctor_m0F22538214D4378DB4A4D179D60E8023F301DE81 ();
+// 0x0000007F System.Void desert_level_controller_<ShakeCamera>d__18::System.IDisposable.Dispose()
+extern void U3CShakeCameraU3Ed__18_System_IDisposable_Dispose_m26D7ADA5E0C4597419DC7289D0A3772453EECF88 ();
+// 0x00000080 System.Boolean desert_level_controller_<ShakeCamera>d__18::MoveNext()
+extern void U3CShakeCameraU3Ed__18_MoveNext_m1A969448B937A58618605AC924A3517EE80E6F83 ();
+// 0x00000081 System.Object desert_level_controller_<ShakeCamera>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CShakeCameraU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFFD235CE412B3DF85D48A59F4834B25F3F4EDF23 ();
+// 0x00000082 System.Void desert_level_controller_<ShakeCamera>d__18::System.Collections.IEnumerator.Reset()
+extern void U3CShakeCameraU3Ed__18_System_Collections_IEnumerator_Reset_m7A86F5829EA54B486EC4DF2A970C7BC701768ADE ();
+// 0x00000083 System.Object desert_level_controller_<ShakeCamera>d__18::System.Collections.IEnumerator.get_Current()
+extern void U3CShakeCameraU3Ed__18_System_Collections_IEnumerator_get_Current_m92D65998D975C81B8A87015ADD5485C5A2DFA85F ();
+// 0x00000084 System.Void desert_level_controller_<SpawnEnemy>d__19::.ctor(System.Int32)
+extern void U3CSpawnEnemyU3Ed__19__ctor_m3211DDB2DC7E37D444D7E771F751D998BFB7BCCC ();
+// 0x00000085 System.Void desert_level_controller_<SpawnEnemy>d__19::System.IDisposable.Dispose()
+extern void U3CSpawnEnemyU3Ed__19_System_IDisposable_Dispose_mA50A253D8B78D9D676DAF84FE9BBDE459E089004 ();
+// 0x00000086 System.Boolean desert_level_controller_<SpawnEnemy>d__19::MoveNext()
+extern void U3CSpawnEnemyU3Ed__19_MoveNext_m08199CF4EF2C43594672704F42777CD15C44D946 ();
+// 0x00000087 System.Object desert_level_controller_<SpawnEnemy>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CSpawnEnemyU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCE7568A9C0750A8BA27B7DC43DF5E8D24CEA4042 ();
+// 0x00000088 System.Void desert_level_controller_<SpawnEnemy>d__19::System.Collections.IEnumerator.Reset()
+extern void U3CSpawnEnemyU3Ed__19_System_Collections_IEnumerator_Reset_m48DB2FA005AF3719CBD18B4B637B9CF1C97A7FEF ();
+// 0x00000089 System.Object desert_level_controller_<SpawnEnemy>d__19::System.Collections.IEnumerator.get_Current()
+extern void U3CSpawnEnemyU3Ed__19_System_Collections_IEnumerator_get_Current_mA276AB8FA832BAC77E00D95A403E0A3A104BD50F ();
+// 0x0000008A System.Void pyramid_enemy_controller_<FillUpHealthBar>d__17::.ctor(System.Int32)
+extern void U3CFillUpHealthBarU3Ed__17__ctor_m91698836F0B1545306E069E5542B5226273C1608 ();
+// 0x0000008B System.Void pyramid_enemy_controller_<FillUpHealthBar>d__17::System.IDisposable.Dispose()
+extern void U3CFillUpHealthBarU3Ed__17_System_IDisposable_Dispose_m25A0E2D921F6AADD8CD21CB76385825FDA00259F ();
+// 0x0000008C System.Boolean pyramid_enemy_controller_<FillUpHealthBar>d__17::MoveNext()
+extern void U3CFillUpHealthBarU3Ed__17_MoveNext_mE7C8FA2471E75426BE3534745BCD97112B54C255 ();
+// 0x0000008D System.Object pyramid_enemy_controller_<FillUpHealthBar>d__17::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CFillUpHealthBarU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m00A1A8E4201E6C4387423F23EBF92D386CBDA293 ();
+// 0x0000008E System.Void pyramid_enemy_controller_<FillUpHealthBar>d__17::System.Collections.IEnumerator.Reset()
+extern void U3CFillUpHealthBarU3Ed__17_System_Collections_IEnumerator_Reset_mA51C84FB883E62450EDE6BCCB7B06654914462EF ();
+// 0x0000008F System.Object pyramid_enemy_controller_<FillUpHealthBar>d__17::System.Collections.IEnumerator.get_Current()
+extern void U3CFillUpHealthBarU3Ed__17_System_Collections_IEnumerator_get_Current_m4BF06A4BCF39F18C2B9050765CD0BBB8F230826D ();
+static Il2CppMethodPointer s_methodPointers[143] = 
 {
 	cut_scene_1_level_controller_Start_mE8F773E6E41E0C86EBA64D8A067F6FA0A5314D45,
 	cut_scene_1_level_controller_Update_mAF90C2A94EE95454D289D3A78CE9A8C98D15DAA5,
@@ -287,9 +383,33 @@ static Il2CppMethodPointer s_methodPointers[95] =
 	halo_controller_SetAnimationFrame_m5108C0AC129F44D8A286524129217C4137083D79,
 	halo_controller_DamagePlayer_m5951B405AC46B3232C0A4DAC5493CC9A508D4FD9,
 	halo_controller__ctor_mE1696E3DDFAD14F2AD7A2EFF1671B61C6BFC3389,
-	w2_player_controller_Start_mBAACA1FC5F5813B5EBE2866872FC6740FB970FCD,
 	w2_player_controller_Update_mFC1DA33297F9AB6B47407AD92DFBE32DD71576C8,
 	w2_player_controller__ctor_mD386EE50DC63689C32C077B015E0B4331732B579,
+	desert_level_controller_Start_m4E5FB4DEDF72E4D28E1A3DB1D13F7519B641E187,
+	desert_level_controller_SandstormCoroutine_m4F975657A451BDF96F8C2B06D412A88B87316CD9,
+	desert_level_controller_ShakeCamera_m2EB6C3CCF51CBF06B62C4D8281AB627928956D80,
+	desert_level_controller_SpawnEnemy_m80611A3BE7966F5425AE52F0A428D089B5DE164E,
+	desert_level_controller_shakeCamera_m6EA32F30EE45EC6150B625DCA81C60740A943136,
+	desert_level_controller_hurtEnemy_m84771EB339B91C27A6EB8B3DF0432ACF2E66BB22,
+	desert_level_controller_Update_m64423D40F61BBA89322C34EFCA59205DC15DCC0E,
+	desert_level_controller_startSandstorm_mAB19852518F5673FE9CB385D4F8266DAD3C5E752,
+	desert_level_controller__ctor_m99DDBE936F60D09C444F1FDF3F6EF859546E1C3E,
+	desert_level_controller__cctor_mD928ABC534710ADD01E5379E210E88D1CDFF1B02,
+	pyramid_enemy_controller_Start_m533FC5961FCDCE0C0CFEA04A8F503253238393CA,
+	pyramid_enemy_controller_SpawnInfo_m76E5A924E875DD461C7C4919B47E6B2701CC2BA1,
+	pyramid_enemy_controller_CleanUpAssets_mFA34B41E23B090298857C62329A1B77E86201E77,
+	pyramid_enemy_controller_Hurt_m7DCE48C987D048A72A742686AFDF1033C7120521,
+	pyramid_enemy_controller_UpdateTextInfo_mA70FAA0AEB40B1FBA0C12A35C76152A471A2AC03,
+	pyramid_enemy_controller_OnCollisionEnter2D_mB418CC39616728BC894A12EBDAEB69964C6D3CD8,
+	pyramid_enemy_controller_FillUpHealthBar_mFE203CF46C1DE4D71FA9B175B7AE51543C5AB51F,
+	pyramid_enemy_controller_SetAnimationFrame_m04096D1FD0B992FB37CD763677C42918AF049202,
+	pyramid_enemy_controller__ctor_mC44FFCCDFB58F1FEE98E1F96791BCD4FE0D5D80E,
+	pyramid_enemy_controller__cctor_mFF46D0DABEE04D9C4F2F25BD477C76068EF76023,
+	world_3_parallax_Start_m748995397835F060A40D470E0F88C1DB41AC01AA,
+	world_3_parallax_Update_m5942EAD9377F719600BB50030DDAD80DE884FF32,
+	world_3_parallax__ctor_mB0D515A8F344AEC487F37796A65AA73A8F7ACAE1,
+	world_3_player_controller_Update_m82662C3E206F0FCB18B4E4E741DC1C0948376466,
+	world_3_player_controller__ctor_m84152703CBF4BB4E4382278934C87C9320D7C1B5,
 	global_transition_World_One_Transition_mAC14D1B755CC755FA5101CDEE7DC70880F18AEF6,
 	global_transition__ctor_m0C64CC23A421FAF50729883AA430EED117041B03,
 	victory_screen_exit_general_Start_m554B042416135376E839E6981F0E1BFC87FE53AA,
@@ -307,8 +427,32 @@ static Il2CppMethodPointer s_methodPointers[95] =
 	U3CShakeCameraU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m350B56D827EE9D845D34D4345B68454006EBC4B9,
 	U3CShakeCameraU3Ed__4_System_Collections_IEnumerator_Reset_m0C4183259A234DBED25549E95B7758BC13317D20,
 	U3CShakeCameraU3Ed__4_System_Collections_IEnumerator_get_Current_m1349038CA54799B54B439816DEDFED132B5D76BB,
+	U3CSandstormCoroutineU3Ed__17__ctor_mD08CC34A3238152866018C7A0420E8F828184372,
+	U3CSandstormCoroutineU3Ed__17_System_IDisposable_Dispose_m29050E425D5E4623EE86A3B6348B3E78E3ADAA05,
+	U3CSandstormCoroutineU3Ed__17_MoveNext_m69035F37423C7755F102A97117CF101663A69DE1,
+	U3CSandstormCoroutineU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0BF9021F1E1EEB4B2ADE5D214F0432DEC80D66AB,
+	U3CSandstormCoroutineU3Ed__17_System_Collections_IEnumerator_Reset_m8DB9570E172D594A58B53D198AF5A6DDAB78C5BC,
+	U3CSandstormCoroutineU3Ed__17_System_Collections_IEnumerator_get_Current_m7EB125BB105F37EF33AC0BC769B78FBBFE9D73A7,
+	U3CShakeCameraU3Ed__18__ctor_m0F22538214D4378DB4A4D179D60E8023F301DE81,
+	U3CShakeCameraU3Ed__18_System_IDisposable_Dispose_m26D7ADA5E0C4597419DC7289D0A3772453EECF88,
+	U3CShakeCameraU3Ed__18_MoveNext_m1A969448B937A58618605AC924A3517EE80E6F83,
+	U3CShakeCameraU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFFD235CE412B3DF85D48A59F4834B25F3F4EDF23,
+	U3CShakeCameraU3Ed__18_System_Collections_IEnumerator_Reset_m7A86F5829EA54B486EC4DF2A970C7BC701768ADE,
+	U3CShakeCameraU3Ed__18_System_Collections_IEnumerator_get_Current_m92D65998D975C81B8A87015ADD5485C5A2DFA85F,
+	U3CSpawnEnemyU3Ed__19__ctor_m3211DDB2DC7E37D444D7E771F751D998BFB7BCCC,
+	U3CSpawnEnemyU3Ed__19_System_IDisposable_Dispose_mA50A253D8B78D9D676DAF84FE9BBDE459E089004,
+	U3CSpawnEnemyU3Ed__19_MoveNext_m08199CF4EF2C43594672704F42777CD15C44D946,
+	U3CSpawnEnemyU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCE7568A9C0750A8BA27B7DC43DF5E8D24CEA4042,
+	U3CSpawnEnemyU3Ed__19_System_Collections_IEnumerator_Reset_m48DB2FA005AF3719CBD18B4B637B9CF1C97A7FEF,
+	U3CSpawnEnemyU3Ed__19_System_Collections_IEnumerator_get_Current_mA276AB8FA832BAC77E00D95A403E0A3A104BD50F,
+	U3CFillUpHealthBarU3Ed__17__ctor_m91698836F0B1545306E069E5542B5226273C1608,
+	U3CFillUpHealthBarU3Ed__17_System_IDisposable_Dispose_m25A0E2D921F6AADD8CD21CB76385825FDA00259F,
+	U3CFillUpHealthBarU3Ed__17_MoveNext_mE7C8FA2471E75426BE3534745BCD97112B54C255,
+	U3CFillUpHealthBarU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m00A1A8E4201E6C4387423F23EBF92D386CBDA293,
+	U3CFillUpHealthBarU3Ed__17_System_Collections_IEnumerator_Reset_mA51C84FB883E62450EDE6BCCB7B06654914462EF,
+	U3CFillUpHealthBarU3Ed__17_System_Collections_IEnumerator_get_Current_m4BF06A4BCF39F18C2B9050765CD0BBB8F230826D,
 };
-static const int32_t s_InvokerIndices[95] = 
+static const int32_t s_InvokerIndices[143] = 
 {
 	23,
 	23,
@@ -388,11 +532,59 @@ static const int32_t s_InvokerIndices[95] =
 	23,
 	23,
 	23,
+	14,
+	1474,
+	14,
+	1421,
+	23,
+	23,
+	23,
+	23,
+	3,
+	23,
+	23,
+	23,
+	114,
+	23,
+	26,
+	14,
+	23,
+	23,
+	3,
 	23,
 	23,
 	23,
 	23,
 	23,
+	23,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	114,
+	14,
+	23,
+	14,
+	32,
+	23,
+	114,
+	14,
+	23,
+	14,
+	32,
+	23,
+	114,
+	14,
+	23,
+	14,
+	32,
+	23,
+	114,
+	14,
+	23,
+	14,
 	32,
 	23,
 	114,
@@ -410,7 +602,7 @@ extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	95,
+	143,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,

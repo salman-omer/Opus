@@ -1612,6 +1612,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Sprite
 
+	//Start Registrations for type : UnityEngine.SpriteRenderer
+
+		//System.Void UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)
+		void Register_UnityEngine_SpriteRenderer_set_color_Injected();
+		Register_UnityEngine_SpriteRenderer_set_color_Injected();
+
+	//End Registrations for type : UnityEngine.SpriteRenderer
+
 	//Start Registrations for type : UnityEngine.SystemInfo
 
 		//System.Boolean UnityEngine.SystemInfo::IsFormatSupported(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)

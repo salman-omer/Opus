@@ -523,6 +523,8 @@ struct Shader_tE2731FF351B74AB4186897484FB01E000C1160CA;
 struct SpaceAttribute_tA724C103FE786D2E773D89B2789C0C1F812376C2;
 // UnityEngine.Sprite
 struct Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198;
+// UnityEngine.SpriteRenderer
+struct SpriteRenderer_tCD51E875611195DBB91123B68434881D3441BC6F;
 // UnityEngine.TextAreaAttribute
 struct TextAreaAttribute_t85045C366B3A3B41CE21984CDDE589E1A786E394;
 // UnityEngine.TextAsset
@@ -10779,6 +10781,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Sprite_get_packingMode_m1B5AA0F5476DA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_t35B976DE901B5423C11705E156938EA27AB402CE  Rect_get_zero_m4CF0F9AD904132829A6EFCA85A1BF52794E7E56B (const RuntimeMethod* method);
 // UnityEngine.Rect UnityEngine.Sprite::GetTextureRect()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_t35B976DE901B5423C11705E156938EA27AB402CE  Sprite_GetTextureRect_mE506ABF33181E32E82B75479EE4A0910350B1BF9 (Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteRenderer_set_color_Injected_mFE58729552E9A143B3C8EA7B89827126DAB3DB90 (SpriteRenderer_tCD51E875611195DBB91123B68434881D3441BC6F * __this, Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * ___value0, const RuntimeMethod* method);
 // UnityEngine.Vector4 UnityEngine.Sprite::GetInnerUVs()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector4_tD148D6428C3F8FF6CD998F82090113C2B490B76E  Sprite_GetInnerUVs_m273E051E7DF38ED3D6077781D75A1C1019CABA25 (Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector4 UnityEngine.Sprite::GetOuterUVs()
@@ -20022,6 +20026,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Sprite_get_pivot_Injected_m526201DCD812D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.SpriteRenderer::set_color(UnityEngine.Color)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteRenderer_set_color_m0729526C86891ADD11611CD13A7A18B851355580 (SpriteRenderer_tCD51E875611195DBB91123B68434881D3441BC6F * __this, Color_t119BCA590009762C7223FDD3AF9706653AC84ED2  ___value0, const RuntimeMethod* method)
+{
+	{
+		SpriteRenderer_set_color_Injected_mFE58729552E9A143B3C8EA7B89827126DAB3DB90(__this, (Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 *)(&___value0), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpriteRenderer_set_color_Injected_mFE58729552E9A143B3C8EA7B89827126DAB3DB90 (SpriteRenderer_tCD51E875611195DBB91123B68434881D3441BC6F * __this, Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 * ___value0, const RuntimeMethod* method)
+{
+	typedef void (*SpriteRenderer_set_color_Injected_mFE58729552E9A143B3C8EA7B89827126DAB3DB90_ftn) (SpriteRenderer_tCD51E875611195DBB91123B68434881D3441BC6F *, Color_t119BCA590009762C7223FDD3AF9706653AC84ED2 *);
+	static SpriteRenderer_set_color_Injected_mFE58729552E9A143B3C8EA7B89827126DAB3DB90_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (SpriteRenderer_set_color_Injected_mFE58729552E9A143B3C8EA7B89827126DAB3DB90_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
