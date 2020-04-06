@@ -6,6 +6,8 @@
 //  Copyright © 2020 WEACW. All rights reserved.
 //
 
+import Accelerate
+
 extension Array where Element:Comparable {
   static func fromUnsafePointer(_ data: UnsafePointer<Element>, count: Int) -> [Element] {
     let buffer = UnsafeBufferPointer(start: data, count: count)
@@ -15,4 +17,11 @@ extension Array where Element:Comparable {
   var maxIndex: Int? {
     return self.enumerated().max(by: {$1.element > $0.element})?.offset
   }
+}
+
+func sqrtq(_ x: [Float]) -> [Float] {
+  var results = [Float](repeating: 0.0, count: x.count)
+  vvsqrtf(&results, x, [Int32(x.count)])
+
+  return results
 }

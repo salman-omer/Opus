@@ -1,6 +1,6 @@
 .vscode
 Pods/
-
+.DS_Store
 ## User Settings
 xcuserdata/
 my_unity_app/Libraries

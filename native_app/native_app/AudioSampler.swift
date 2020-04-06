@@ -42,7 +42,9 @@ class AudioSampler {
     
     // MARK: - Buffer Size
     // The following value can be adjusted to increase or decrease audio frame count.
-    private let bufferSize: AVAudioFrameCount = 11025
+    private let bufferSize: AVAudioFrameCount = 4410
+    private var samplingWindow: [Float] = []
+    private var samplingIndex = 0
     
     private var levelThreshold : Float?
     private var audioChannel: AVCaptureAudioChannel?
@@ -80,11 +82,24 @@ class AudioSampler {
                 return
             }
             
-            strongSelf.audioMetering(buffer: buffer)
-            
             do {
-                let transformedBuffer = try strongSelf.transform(buffer: buffer)
-                strongSelf.callback(transformedBuffer, time, strongSelf.averagePowerForChannel0 > strongSelf.POWER_THRESHOLD)
+                guard let pointer = buffer.floatChannelData else {
+                    throw AudioSamplerErrors.floatChannelDataIsNil
+                }
+                
+                if(strongSelf.samplingIndex == 13230) {
+                    strongSelf.samplingWindow = strongSelf.samplingWindow[Int(buffer.frameLength)...] + Array.fromUnsafePointer(pointer.pointee, count: Int(buffer.frameLength))
+                    // Check average decibel level of our sampling window
+                    strongSelf.audioMetering(samples: strongSelf.samplingWindow, frameCount: strongSelf.samplingWindow.count, channelCount: buffer.format.channelCount)
+                    // Generate Buffer struct from data and send to sample received delegate
+                    let transformedBuffer = try strongSelf.transform(elements: strongSelf.samplingWindow)
+//                    print("bufferLength: \(transformedBuffer.elements.count), time: \(time.sampleTime), powerLevel: \(strongSelf.averagePowerForChannel0)")
+                    strongSelf.callback(transformedBuffer, time, strongSelf.averagePowerForChannel0 > strongSelf.POWER_THRESHOLD)
+                } else {
+                    strongSelf.samplingWindow = strongSelf.samplingWindow + Array.fromUnsafePointer(pointer.pointee, count: Int(buffer.frameLength))
+//                    print("samplingIndex: \(strongSelf.samplingIndex), windowCount: \(strongSelf.samplingWindow.count)")
+                    strongSelf.samplingIndex += Int(buffer.frameLength)
+                }
             } catch {}
         }
         
@@ -109,14 +124,7 @@ class AudioSampler {
     }
     
     // MARK: - Audio Buffer Transformer
-    
-    
-    func transform(buffer: AVAudioPCMBuffer) throws -> Buffer {
-        guard let pointer = buffer.floatChannelData else {
-            throw AudioSamplerErrors.floatChannelDataIsNil
-        }
-        
-        let elements = Array.fromUnsafePointer(pointer.pointee, count:Int(buffer.frameLength))
+    func transform(elements: [Float]) throws -> Buffer {
         let buffer = Buffer(elements: elements)
         let diffElements = difference(buffer: buffer.elements)
         return Buffer(elements: diffElements)
@@ -164,13 +172,10 @@ class AudioSampler {
       return audioChannel?.averagePowerLevel
     }
     
-    func audioMetering(buffer: AVAudioPCMBuffer) {
-        buffer.frameLength = bufferSize
-        let inNumberFrames:UInt = UInt(buffer.frameLength)
-        if buffer.format.channelCount > 0 {
-            let samples = (buffer.floatChannelData![0])
+    func audioMetering(samples: [Float], frameCount: Int, channelCount: AVAudioChannelCount) {
+        if channelCount > 0 {
             var avgValue:Float32 = 0
-            vDSP_meamgv(samples,1 , &avgValue, inNumberFrames)
+            vDSP_meamgv(samples, 1, &avgValue, UInt(frameCount))
             var v:Float = -100
             if avgValue != 0 {
                 v = 20.0 * log10f(avgValue)
@@ -179,10 +184,9 @@ class AudioSampler {
             self.averagePowerForChannel1 = self.averagePowerForChannel0
         }
 
-        if buffer.format.channelCount > 1 {
-            let samples = buffer.floatChannelData![1]
+        if channelCount > 1 {
             var avgValue:Float32 = 0
-            vDSP_meamgv(samples, 1, &avgValue, inNumberFrames)
+            vDSP_meamgv(samples, 1, &avgValue, UInt(frameCount))
             var v:Float = -100
             if avgValue != 0 {
                 v = 20.0 * log10f(avgValue)
