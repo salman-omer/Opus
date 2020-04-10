@@ -87,7 +87,7 @@ class AudioSampler {
                     throw AudioSamplerErrors.floatChannelDataIsNil
                 }
                 
-                if(strongSelf.samplingIndex == 13230) {
+                if(strongSelf.samplingIndex == 16384) {
                     strongSelf.samplingWindow = strongSelf.samplingWindow[Int(buffer.frameLength)...] + Array.fromUnsafePointer(pointer.pointee, count: Int(buffer.frameLength))
                     // Check average decibel level of our sampling window
                     strongSelf.audioMetering(samples: strongSelf.samplingWindow, frameCount: strongSelf.samplingWindow.count, channelCount: buffer.format.channelCount)
@@ -96,9 +96,18 @@ class AudioSampler {
 //                    print("bufferLength: \(transformedBuffer.elements.count), time: \(time.sampleTime), powerLevel: \(strongSelf.averagePowerForChannel0)")
                     strongSelf.callback(transformedBuffer, time, strongSelf.averagePowerForChannel0 > strongSelf.POWER_THRESHOLD)
                 } else {
-                    strongSelf.samplingWindow = strongSelf.samplingWindow + Array.fromUnsafePointer(pointer.pointee, count: Int(buffer.frameLength))
-//                    print("samplingIndex: \(strongSelf.samplingIndex), windowCount: \(strongSelf.samplingWindow.count)")
-                    strongSelf.samplingIndex += Int(buffer.frameLength)
+                    let remaining = 16384 - strongSelf.samplingWindow.count
+//                    print("remaining: \(remaining), sampleCount: \(strongSelf.samplingWindow.count), samplingIndex: \(strongSelf.samplingIndex)")
+                    if(remaining < buffer.frameLength) {
+                        let sliceFrom: Int = Int(buffer.frameLength) - remaining
+                        strongSelf.samplingWindow = strongSelf.samplingWindow[sliceFrom...] + Array.fromUnsafePointer(pointer.pointee, count: Int(buffer.frameLength))
+                        strongSelf.samplingIndex = 16384
+                    } else {
+                        strongSelf.samplingWindow = strongSelf.samplingWindow + Array.fromUnsafePointer(pointer.pointee, count: Int(buffer.frameLength))
+                        //                    print("samplingIndex: \(strongSelf.samplingIndex), windowCount: \(strongSelf.samplingWindow.count)")
+                        strongSelf.samplingIndex += Int(buffer.frameLength)
+                    }
+                    
                 }
             } catch {}
         }
