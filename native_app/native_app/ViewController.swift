@@ -14,13 +14,15 @@ class ViewController: UIViewController {
 
     var timer = Timer()
     var sampler: AudioSampler?
+    private var POWER_THRESHOLD: Float = -35
     
-    func onAudioSampleReceived(buffer: Buffer, time: AVAudioTime, meetsPowerThreshold: Bool) {
-        if(meetsPowerThreshold) {
+    func onAudioSampleReceived(buffer: Buffer, time: AVAudioTime, powerLevel: Float) {
+        if(powerLevel > POWER_THRESHOLD) {
             do {
-                let frequency = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
+                let frequencies: [Float] = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
+                let frequency = frequencies[0]
                 let note = try Note(frequency: Double(frequency))
-                let message = "Note: \(note.string) LowerNote: \(try note.lower().string) HigherNote: \(try note.higher().string) Time: \(printDate())"
+                let  message = "Note: \(note.string) LowerNote: \(try note.lower().string) HigherNote: \(try note.higher().string) Time: \(printDate())"
                 
                 UnityEmbeddedSwift.sendUnityMessage("level_controller", methodName: "_processFrequencyData", message: message)
             } catch {}

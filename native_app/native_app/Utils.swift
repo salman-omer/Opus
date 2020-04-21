@@ -25,3 +25,9 @@ func sqrtq(_ x: [Float]) -> [Float] {
 
   return results
 }
+
+func sanitize(location: Int, reserveLocation: Int, elements: [Float]) -> Int {
+  return location >= 0 && location < elements.count
+    ? location
+    : reserveLocation
+}

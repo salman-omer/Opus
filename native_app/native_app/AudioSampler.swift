@@ -11,23 +11,27 @@ import Accelerate
 
 // MARK: Buffer
 struct Buffer {
-  var elements: [Float]
-  var realElements: [Float]?
-  var imagElements: [Float]?
+    var samplingRate: Double
+    var bufferSize: Int
+    var elements: [Float]
+    var realElements: [Float]?
+    var imagElements: [Float]?
 
-  var count: Int {
-    return elements.count
-  }
+    var count: Int {
+        return elements.count
+    }
 
-  init(elements: [Float], realElements: [Float]? = nil, imagElements: [Float]? = nil) {
-    self.elements = elements
-    self.realElements = realElements
-    self.imagElements = imagElements
-  }
+    init(elements: [Float], realElements: [Float]? = nil, imagElements: [Float]? = nil, samplingRate: Double = 48000.0, bufferSize: Int = 16384) {
+        self.elements = elements
+        self.realElements = realElements
+        self.imagElements = imagElements
+        self.samplingRate = samplingRate
+        self.bufferSize = bufferSize
+    }
 }
 
 enum AudioSamplerErrors: Error {
-  case floatChannelDataIsNil
+    case floatChannelDataIsNil
 }
 
 // MARK: Audio Sampler
@@ -38,7 +42,7 @@ class AudioSampler {
     // (1) Transformed Audio Buffer
     // (2) Time the sample was taken at
     // (3) Whether or not the sample met the power level threshold
-    var callback : (Buffer, AVAudioTime, Bool) -> Void
+    var callback : (Buffer, AVAudioTime, Float) -> Void
     
     // MARK: - Buffer Size
     // The following value can be adjusted to increase or decrease audio frame count.
@@ -54,7 +58,7 @@ class AudioSampler {
     private let bus = 0
     
     // MARK: - Initializer
-    required init(onReceived: ((Buffer, AVAudioTime, Bool) -> Void)!) {
+    required init(onReceived: ((Buffer, AVAudioTime, Float) -> Void)!) {
         self.callback = onReceived
     }
     
@@ -92,9 +96,9 @@ class AudioSampler {
                     // Check average decibel level of our sampling window
                     strongSelf.audioMetering(samples: strongSelf.samplingWindow, frameCount: strongSelf.samplingWindow.count, channelCount: buffer.format.channelCount)
                     // Generate Buffer struct from data and send to sample received delegate
-                    let transformedBuffer = try strongSelf.transform(elements: strongSelf.samplingWindow)
+                    let transformedBuffer = try strongSelf.transform(elements: strongSelf.samplingWindow, samplingRate: buffer.format.sampleRate, bufferSize: Int(buffer.frameLength))
 //                    print("bufferLength: \(transformedBuffer.elements.count), time: \(time.sampleTime), powerLevel: \(strongSelf.averagePowerForChannel0)")
-                    strongSelf.callback(transformedBuffer, time, strongSelf.averagePowerForChannel0 > strongSelf.POWER_THRESHOLD)
+                    strongSelf.callback(transformedBuffer, time, strongSelf.averagePowerForChannel0)
                 } else {
                     let remaining = 16384 - strongSelf.samplingWindow.count
 //                    print("remaining: \(remaining), sampleCount: \(strongSelf.samplingWindow.count), samplingIndex: \(strongSelf.samplingIndex)")
@@ -133,33 +137,57 @@ class AudioSampler {
     }
     
     // MARK: - Audio Buffer Transformer
-    func transform(elements: [Float]) throws -> Buffer {
-        let buffer = Buffer(elements: elements)
-        let diffElements = difference(buffer: buffer.elements)
-        return Buffer(elements: diffElements)
-    }
-    
-    func difference(buffer: [Float]) -> [Float] {
-      let bufferHalfCount = buffer.count / 2
-      var resultBuffer = [Float](repeating:0.0, count:bufferHalfCount)
-      var tempBuffer = [Float](repeating:0.0, count:bufferHalfCount)
-      var tempBufferSq = [Float](repeating:0.0, count:bufferHalfCount)
-      let len = vDSP_Length(bufferHalfCount)
-      var vSum: Float = 0.0
+    func transform(elements: [Float], samplingRate: Double, bufferSize: Int) throws -> Buffer {
+        var frameElements: [Float] = elements
+        frameElements[0] = 0
+        let frameCount = frameElements.count
+        let log2n = UInt(round(log2(Double(frameCount))))
+        let bufferSizePOT = Int(1 << log2n)
+        let inputCount = bufferSizePOT / 2
+        let fftSetup = vDSP_create_fftsetup(log2n, Int32(kFFTRadix2))
 
-      for tau in 0 ..< bufferHalfCount {
-        let bufferTau = UnsafePointer<Float>(buffer).advanced(by: tau)
-        // do a diff of buffer with itself at tau offset
-        vDSP_vsub(buffer, 1, bufferTau, 1, &tempBuffer, 1, len)
-        // square each value of the diff vector
-        vDSP_vsq(tempBuffer, 1, &tempBufferSq, 1, len)
-        // sum the squared values into vSum
-        vDSP_sve(tempBufferSq, 1, &vSum, len)
-        // store that in the result buffer
-        resultBuffer[tau] = vSum
-      }
+        var realp = [Float](repeating: 0, count: inputCount)
+        var imagp = [Float](repeating: 0, count: inputCount)
+        var output = DSPSplitComplex(realp: &realp, imagp: &imagp)
 
-      return resultBuffer
+        let windowSize = bufferSizePOT
+        var transferBuffer = [Float](repeating: 0, count: windowSize)
+        var window = [Float](repeating: 0, count: windowSize)
+
+        vDSP_hann_window(&window, vDSP_Length(windowSize), Int32(vDSP_HANN_NORM))
+        
+        vDSP_vmul(frameElements, 1, window,
+                  1, &transferBuffer, 1, vDSP_Length(windowSize))
+        
+        
+        let temp = UnsafePointer<Float>(transferBuffer)
+
+        temp.withMemoryRebound(to: DSPComplex.self, capacity: transferBuffer.count) { (typeConvertedTransferBuffer) -> Void in
+            vDSP_ctoz(typeConvertedTransferBuffer, 2, &output, 1, vDSP_Length(inputCount))
+        }
+
+        vDSP_fft_zrip(fftSetup!, &output, 1, log2n, FFTDirection(FFT_FORWARD))
+
+        var magnitudes = [Float](repeating: 0.0, count: inputCount)
+        vDSP_zvmags(&output, 1, &magnitudes, 1, vDSP_Length(inputCount))
+
+        var normalizedMagnitudes = [Float](repeating: 0.0, count: inputCount)
+        vDSP_vsmul(sqrtq(magnitudes), 1, [2.0 / Float(inputCount)],
+          &normalizedMagnitudes, 1, vDSP_Length(inputCount))
+
+        // MHPS Step 1: Apply a threshold to the output of fourier transform
+        // Multiply 0.02 to the maximum magnitude from the resulting FFT
+        // Anything less than that result should be set to 0, everything else remains the same
+        
+        let maximumMagnitude: Float = normalizedMagnitudes.max()!
+        let threshold: Float = 0.02 * maximumMagnitude
+        let filteredMagnitudes: [Float] = vDSP.threshold(normalizedMagnitudes, to: threshold, with: .zeroFill)
+        
+        let buffer = Buffer(elements: filteredMagnitudes, samplingRate: samplingRate, bufferSize: bufferSize)
+
+        vDSP_destroy_fftsetup(fftSetup)
+
+        return buffer
     }
     
     // MARK: - Audio Level Metering
