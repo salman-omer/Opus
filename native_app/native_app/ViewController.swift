@@ -33,6 +33,8 @@ class ViewController: UIViewController {
             if(powerLevel > POWER_THRESHOLD) {
                     frequencies = try estimateFrequency(sampleRate: Float(time.sampleRate), buffer: buffer)
                 
+                    // send current sound power level to unity
+                    UnityEmbeddedSwift.sendUnityMessage("level_controller", methodName: "_currentPowerLevel", message: NSString(format: "%.2f", powerLevel) as String)
             }
             
             for frequency in frequencies {
@@ -92,7 +94,6 @@ class ViewController: UIViewController {
                 runningSet.removeAll(keepingCapacity: true)
             }
             
-            // send current sound power level to unity
             
             
         } catch {}
