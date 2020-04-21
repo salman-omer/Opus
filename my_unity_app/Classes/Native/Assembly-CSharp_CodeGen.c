@@ -130,12 +130,12 @@ extern void World_2_Camera_Controller__ctor_m4B3B9D0599DD6DF2F6B908C6D3698F7BB18
 extern void World_2_Camera_Controller__cctor_m0F7A84EA3DE6C5D8D4C430A94F2F9B3D275A41DD ();
 // 0x00000037 System.Void forest_level_controller::Start()
 extern void forest_level_controller_Start_mD0145D3AA1FFF336A477E239F6BE31CEDE5AE1CF ();
-// 0x00000038 System.Void forest_level_controller::_startNote(System.String)
-extern void forest_level_controller__startNote_mBFB94807497909A659B8E864B49A693DF1F60B44 ();
-// 0x00000039 System.Void forest_level_controller::_endNote(System.String)
-extern void forest_level_controller__endNote_mF4743B2F15D19F37246751209E86C781381AD0DC ();
-// 0x0000003A System.Boolean forest_level_controller::noteEquality(System.String,System.String)
-extern void forest_level_controller_noteEquality_mEF445E2F078C73C02BD20104E2AC1BD0B8DA857A ();
+// 0x00000038 System.Void forest_level_controller::_startNotes(System.String)
+extern void forest_level_controller__startNotes_m5DC3F777514EEFAB2A0CE5B0F59AC5D7338718B4 ();
+// 0x00000039 System.Void forest_level_controller::_endNotes(System.String)
+extern void forest_level_controller__endNotes_m6822E5D7130F5035ED5FA2A1C104D3142F049253 ();
+// 0x0000003A System.Boolean forest_level_controller::notePresent(System.String[],System.String)
+extern void forest_level_controller_notePresent_mE77E0E25F2CB98B77CDE0EDB7EB4BE6D021ACADD ();
 // 0x0000003B System.Void forest_level_controller::Update()
 extern void forest_level_controller_Update_m9A7F66641B80CA6A2EF1CF0830A22D27C72DED98 ();
 // 0x0000003C System.Void forest_level_controller::harmEnemy()
@@ -188,12 +188,12 @@ extern void halo_controller__ctor_mE1696E3DDFAD14F2AD7A2EFF1671B61C6BFC3389 ();
 extern void w2_player_controller_Update_mFC1DA33297F9AB6B47407AD92DFBE32DD71576C8 ();
 // 0x00000054 System.Void w2_player_controller::.ctor()
 extern void w2_player_controller__ctor_mD386EE50DC63689C32C077B015E0B4331732B579 ();
-// 0x00000055 System.Void desert_level_controller::_startNote(System.String)
-extern void desert_level_controller__startNote_m1E7456CF4E029D561E372D4C8F2624D690D32FDB ();
-// 0x00000056 System.Void desert_level_controller::_endNote(System.String)
-extern void desert_level_controller__endNote_m2451DB0A3011CF95ED5EC2ADD84F6D8FAEE3C11D ();
-// 0x00000057 System.Boolean desert_level_controller::noteEquality(System.String,System.String)
-extern void desert_level_controller_noteEquality_mA85960605F00CA8436712A36B3A8888647E4C9DD ();
+// 0x00000055 System.Void desert_level_controller::_startNotes(System.String)
+extern void desert_level_controller__startNotes_mCDD051344B510F3A6436DFEDADFF1D5E9EA707D8 ();
+// 0x00000056 System.Void desert_level_controller::_endNotes(System.String)
+extern void desert_level_controller__endNotes_mFB98801870D15BC73683BE40FFF88E889A8F332A ();
+// 0x00000057 System.Boolean desert_level_controller::notePresent(System.String[],System.String)
+extern void desert_level_controller_notePresent_m91A99780C823A2995F3436766E008143BAF1C0E3 ();
 // 0x00000058 System.Void desert_level_controller::Start()
 extern void desert_level_controller_Start_m4E5FB4DEDF72E4D28E1A3DB1D13F7519B641E187 ();
 // 0x00000059 System.Collections.IEnumerator desert_level_controller::SandstormCoroutine()
@@ -485,9 +485,9 @@ static Il2CppMethodPointer s_methodPointers[204] =
 	World_2_Camera_Controller__ctor_m4B3B9D0599DD6DF2F6B908C6D3698F7BB18492B8,
 	World_2_Camera_Controller__cctor_m0F7A84EA3DE6C5D8D4C430A94F2F9B3D275A41DD,
 	forest_level_controller_Start_mD0145D3AA1FFF336A477E239F6BE31CEDE5AE1CF,
-	forest_level_controller__startNote_mBFB94807497909A659B8E864B49A693DF1F60B44,
-	forest_level_controller__endNote_mF4743B2F15D19F37246751209E86C781381AD0DC,
-	forest_level_controller_noteEquality_mEF445E2F078C73C02BD20104E2AC1BD0B8DA857A,
+	forest_level_controller__startNotes_m5DC3F777514EEFAB2A0CE5B0F59AC5D7338718B4,
+	forest_level_controller__endNotes_m6822E5D7130F5035ED5FA2A1C104D3142F049253,
+	forest_level_controller_notePresent_mE77E0E25F2CB98B77CDE0EDB7EB4BE6D021ACADD,
 	forest_level_controller_Update_m9A7F66641B80CA6A2EF1CF0830A22D27C72DED98,
 	forest_level_controller_harmEnemy_m3F486971EAC6DC0960FD633176321B8F5FF58010,
 	forest_level_controller_playNote_mDA207A4A0F1E7F0C1CE5C385B554F01225D39FF7,
@@ -514,9 +514,9 @@ static Il2CppMethodPointer s_methodPointers[204] =
 	halo_controller__ctor_mE1696E3DDFAD14F2AD7A2EFF1671B61C6BFC3389,
 	w2_player_controller_Update_mFC1DA33297F9AB6B47407AD92DFBE32DD71576C8,
 	w2_player_controller__ctor_mD386EE50DC63689C32C077B015E0B4331732B579,
-	desert_level_controller__startNote_m1E7456CF4E029D561E372D4C8F2624D690D32FDB,
-	desert_level_controller__endNote_m2451DB0A3011CF95ED5EC2ADD84F6D8FAEE3C11D,
-	desert_level_controller_noteEquality_mA85960605F00CA8436712A36B3A8888647E4C9DD,
+	desert_level_controller__startNotes_mCDD051344B510F3A6436DFEDADFF1D5E9EA707D8,
+	desert_level_controller__endNotes_mFB98801870D15BC73683BE40FFF88E889A8F332A,
+	desert_level_controller_notePresent_m91A99780C823A2995F3436766E008143BAF1C0E3,
 	desert_level_controller_Start_m4E5FB4DEDF72E4D28E1A3DB1D13F7519B641E187,
 	desert_level_controller_SandstormCoroutine_m4F975657A451BDF96F8C2B06D412A88B87316CD9,
 	desert_level_controller_ShakeCamera_m2EB6C3CCF51CBF06B62C4D8281AB627928956D80,
