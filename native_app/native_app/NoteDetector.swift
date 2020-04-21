@@ -130,6 +130,10 @@ func estimateLocation(buffer: Buffer) throws -> [Int] {
         }
     }
     
+    if (realPitchLocations.count > 10) {
+        return []
+    }
+    
     print("num of real pitches found: \(realPitchLocations.count), real pitches: \(realPitchLocations)")
     
     return realPitchLocations;

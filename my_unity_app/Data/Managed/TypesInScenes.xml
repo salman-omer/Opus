@@ -55,6 +55,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="World1CameraController" preserve="nothing"/>
 		<type fullname="World_2_Camera_Controller" preserve="nothing"/>
+		<type fullname="desert_level_controller" preserve="nothing"/>
 		<type fullname="forest_level_controller" preserve="nothing"/>
 		<type fullname="ghost_controller" preserve="nothing"/>
 		<type fullname="global_transition" preserve="nothing"/>
@@ -62,10 +63,13 @@
 		<type fullname="level_controller" preserve="nothing"/>
 		<type fullname="parallax" preserve="nothing"/>
 		<type fullname="player_controller" preserve="nothing"/>
+		<type fullname="pyramid_enemy_controller" preserve="nothing"/>
 		<type fullname="test_level_controller" preserve="nothing"/>
 		<type fullname="transition" preserve="nothing"/>
 		<type fullname="transition_test" preserve="nothing"/>
 		<type fullname="w2_player_controller" preserve="nothing"/>
+		<type fullname="world_3_parallax" preserve="nothing"/>
+		<type fullname="world_3_player_controller" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
