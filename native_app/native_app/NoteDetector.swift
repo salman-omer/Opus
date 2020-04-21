@@ -16,6 +16,7 @@ func estimateFrequency(sampleRate: Float, buffer: Buffer) throws -> [Float] {
     for location in locations {
         frequencies.append(Float(location) * sampleRate / (Float(buffer.count) * 2))
     }
+    print("num frequencies: \(frequencies.count), data: \(frequencies)")
     return frequencies
 }
 
@@ -105,8 +106,9 @@ func estimateLocation(buffer: Buffer) throws -> [Int] {
         for uncertainPitchLocation in uncertainPitchLocations {
             var s_current: Float = 0
             for i in 1...9 {
-                if (i*uncertainPitchLocation) < buffer.count {
-                    s_current += buffer.elements[i]
+                let index = i*uncertainPitchLocation
+                if index < buffer.count {
+                    s_current += buffer.elements[index]
                 }
             }
             
@@ -121,20 +123,15 @@ func estimateLocation(buffer: Buffer) throws -> [Int] {
                     }
                 }
                 if(!foundHarmonicOverflow) {
-//                    let frequency = Float(uncertainPitchLocation) * Float(buffer.samplingRate) / (Float(buffer.count) * 2)
-//                    let note = try Note(frequency: Double(frequency))
-//                    print("found real pitch from uncertain pitch: location: \(uncertainPitchLocation), note: \(note.string), frequency: \(frequency)")
                     realPitchLocations.append(uncertainPitchLocation)
                 }
             }
         }
     }
     
-    if (realPitchLocations.count > 10) {
-        return []
+    if(realPitchLocations.count > 10) {
+        return [Int(vdspIndex)];
     }
-    
-    print("num of real pitches found: \(realPitchLocations.count), real pitches: \(realPitchLocations)")
     
     return realPitchLocations;
 }
