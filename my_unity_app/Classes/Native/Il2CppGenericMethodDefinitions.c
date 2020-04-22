@@ -21,7 +21,7 @@ IL2CPP_EXTERN_C_END
 
 
 extern const Il2CppMethodSpec g_Il2CppMethodSpecTable[];
-const Il2CppMethodSpec g_Il2CppMethodSpecTable[14129] = 
+const Il2CppMethodSpec g_Il2CppMethodSpecTable[14130] = 
 {
 	{ 0, 0, -1 } /* System.Void <>f__AnonymousType0`1<System.Object>::.ctor(<message>j__TPar) */,
 	{ 1, 0, -1 } /* System.Boolean <>f__AnonymousType0`1<System.Object>::Equals(System.Object) */,
@@ -2592,6 +2592,7 @@ const Il2CppMethodSpec g_Il2CppMethodSpecTable[14129] =
 	{ 8947, 945, -1 } /* System.Boolean System.Collections.Generic.List`1/Enumerator<bubble_controller>::MoveNext() */,
 	{ 8946, 945, -1 } /* System.Void System.Collections.Generic.List`1/Enumerator<bubble_controller>::Dispose() */,
 	{ 8932, 945, -1 } /* System.Boolean System.Collections.Generic.List`1<bubble_controller>::Remove(!0) */,
+	{ 8903, 945, -1 } /* System.Int32 System.Collections.Generic.List`1<bubble_controller>::get_Count() */,
 	{ 8906, 945, -1 } /* !0 System.Collections.Generic.List`1<bubble_controller>::get_Item(System.Int32) */,
 	{ 8898, 945, -1 } /* System.Void System.Collections.Generic.List`1<bubble_controller>::.ctor() */,
 	{ 8906, 941, -1 } /* !0 System.Collections.Generic.List`1<System.Collections.Generic.List`1<Note>>::get_Item(System.Int32) */,
