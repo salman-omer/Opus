@@ -10,6 +10,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -44,6 +46,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -71,6 +75,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -84,6 +90,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -97,6 +105,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -110,6 +120,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -123,6 +135,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -136,6 +150,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -246,6 +262,20 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimationClip",
+            "fullManagedTypeName": "UnityEngine.AnimationClip",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Main Menu/Main_Menu.unity",
+                "Assets/World 1/music_level_prototype.unity",
+                "Assets/World 2/World 2.unity",
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioBehaviour",
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
@@ -254,6 +284,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -267,6 +299,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -280,7 +314,65 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Animator",
+            "fullManagedTypeName": "UnityEngine.Animator",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Main Menu/Main_Menu.unity",
+                "Assets/World 1/music_level_prototype.unity",
+                "Assets/World 2/World 2.unity",
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RuntimeAnimatorController",
+            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Main Menu/Main_Menu.unity",
+                "Assets/World 1/music_level_prototype.unity",
+                "Assets/World 2/World 2.unity",
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Motion",
+            "fullManagedTypeName": "UnityEngine.Motion",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Main Menu/Main_Menu.unity",
+                "Assets/World 1/music_level_prototype.unity",
+                "Assets/World 2/World 2.unity",
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimatorController",
+            "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Main Menu/Main_Menu.unity",
+                "Assets/World 1/music_level_prototype.unity",
+                "Assets/World 2/World 2.unity",
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
             ]
         },
         {
@@ -293,6 +385,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -306,6 +400,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -319,6 +415,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -332,6 +430,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -345,6 +445,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -358,6 +460,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -371,6 +475,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -384,6 +490,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -397,6 +505,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -410,6 +520,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -423,6 +535,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -436,6 +550,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -449,6 +565,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -462,6 +580,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -475,6 +595,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -488,6 +610,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -501,6 +625,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -514,18 +640,9 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AnimationClip",
-            "fullManagedTypeName": "UnityEngine.AnimationClip",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/World 1/music_level_prototype.unity",
-                "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
             ]
         },
         {
@@ -537,6 +654,8 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
             ]
         },
@@ -556,7 +675,9 @@
             "moduleName": "Physics2D",
             "usedInScenes": [
                 "Assets/World 1/music_level_prototype.unity",
-                "Assets/World 3/World 3.unity"
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
             ]
         },
         {
@@ -567,7 +688,9 @@
             "usedInScenes": [
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
             ]
         },
         {
@@ -579,51 +702,9 @@
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
                 "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity",
                 "Assets/Test/Test.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Animator",
-            "fullManagedTypeName": "UnityEngine.Animator",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/World 1/music_level_prototype.unity",
-                "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RuntimeAnimatorController",
-            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/World 1/music_level_prototype.unity",
-                "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Motion",
-            "fullManagedTypeName": "UnityEngine.Motion",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/World 1/music_level_prototype.unity",
-                "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AnimatorController",
-            "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/World 1/music_level_prototype.unity",
-                "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
             ]
         },
         {
@@ -661,7 +742,9 @@
             "usedInScenes": [
                 "Assets/World 1/music_level_prototype.unity",
                 "Assets/World 2/World 2.unity",
-                "Assets/World 3/World 3.unity"
+                "Assets/World 3/World 3.unity",
+                "Assets/World 4/World 4.unity",
+                "Assets/World 5/World 5.unity"
             ]
         },
         {
@@ -671,6 +754,15 @@
             "moduleName": "Tilemap",
             "usedInScenes": [
                 "Assets/World 1/music_level_prototype.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "CircleCollider2D",
+            "fullManagedTypeName": "UnityEngine.CircleCollider2D",
+            "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/World 5/World 5.unity"
             ]
         },
         {
@@ -684,6 +776,34 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "World_2_Camera_Controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "World_4_level_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "World_4_parallax",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "World_4_player_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "bubble_controller",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -746,6 +866,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "progress_bar_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "pyramid_enemy_controller",
             "moduleName": "",
             "usedInScenes": []
@@ -781,6 +908,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "world5_player_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "world_3_parallax",
             "moduleName": "",
             "usedInScenes": []
@@ -789,6 +923,27 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "world_3_player_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "world_4_enemy_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "world_5_level_controller",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "world_5_parallax",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -838,6 +993,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Text",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "com.unity.multiplayer-hlapi.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Networking.NetworkCallbacks",
             "moduleName": "",
             "usedInScenes": []
         }
