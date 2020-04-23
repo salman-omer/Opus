@@ -23,11 +23,11 @@ Thus, our project is a musical game where the controller is a real, physical pia
 
 # How to Compile <br />
 
-If you have changed code from the Unity project and need to compile to Xcode, you need to follow a few specific steps. In Unity, select the target OS as iOS and select "Build". When you build, build it to this repo's base directory as "my_unity_app" and overwrite everything that is here. Once you have done so, go into XCode and select "iPhone-Unity" in the file explorer on the left. In the preferences window that opens on the right, uncheck anything that is checked under "Targets" and check "Unity Framework". This will allow iOS to see Unity properly. <br />
+Clone the repository and open the uaal_demp.xcworkspace in XCode. Compile "native_app" directly to your iPhone device. Compiling any of the individual frameworks or not using a physical device will result in errors. Since we do not have proper Apple Development licensing on this project, you may have to change your account settings to compile properly. XCode will throw errors which can be resolved by clicking on XCode -> Preferences -> Accounts. Then add a development account (either a github or Apple ID). Then try to compile again. Resolve errors regarding the publishing account by changing the publishing team to your inputted account as indicated. If you need help, please don't hesitate to contact us! <br />
 
 # How to Update Game Code in the App <br />
 
-Clone the repository and open the uaal_demp.xcworkspace in XCode. Compile "native_app" directly to your iPhone device. Compiling any of the individual frameworks or not using a physical device will result in errors. Since we do not have proper Apple Development licensing on this project, you may have to change your account settings to compile properly. XCode will throw errors which can be resolved by clicking on XCode -> Preferences -> Accounts. Then add a development account (either a github or Apple ID). Then try to compile again. Resolve errors regarding the publishing account by changing the publishing team to your inputted account as indicated. If you need help, please don't hesitate to contact us! <br />
+If you have changed code from the Unity project and need to compile to Xcode, you need to follow a few specific steps. In Unity, select the target OS as iOS and select "Build". When you build, build it to this repo's base directory as "my_unity_app" and overwrite everything that is here. Once you have done so, go into XCode and select "iPhone-Unity" in the file explorer on the left. In the preferences window that opens on the right, uncheck anything that is checked under "Targets" and check "Unity Framework". This will allow iOS to see Unity properly. <br />
 
 # Supporting Documents <br />
 
