@@ -23,7 +23,7 @@ Thus, our project is a musical game where the controller is a real, physical pia
 
 # How to Compile <br />
 
-Clone the repository and open the uaal_demp.xcworkspace in XCode. Compile "native_app" directly to your iPhone device. Compiling any of the individual frameworks or not using a physical device will result in errors. Since we do not have proper Apple Development licensing on this project, you may have to change your account settings to compile properly. XCode will throw errors which can be resolved by clicking on XCode -> Preferences -> Accounts. Then add a development account (either a github or Apple ID). Then try to compile again. Resolve errors regarding the publishing account by changing the publishing team to your inputted account as indicated. If you need help, please don't hesitate to contact us! <br />
+Clone the repository and open the uaal_demp.xcworkspace in XCode. Compile "native_app" directly to your iPhone device. Compiling any of the individual frameworks or not using a physical device will result in errors. Since we do not have proper Apple Development licensing on this project, you may have to change your account settings to compile properly. XCode will throw errors which can be resolved by clicking on XCode -> Preferences -> Accounts. Then add a development account (either a github or Apple ID). Then try to compile again. Resolve errors regarding the publishing account by changing the publishing team to your inputted account as indicated. Lastly, run `pod init` to install cocaopods packages in the base directory, If you need help, please don't hesitate to contact us! <br />
 
 # How to Update Game Code in the App <br />
 
