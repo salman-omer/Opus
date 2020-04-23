@@ -1,7 +1,13 @@
 # Opus - A Mobile Music Learning Game
 
 Rutgers ECE Capstone group S20-15 <br />
-Team members: Justin May, Salman Omer, Yash Shah, Skyler Lee, Jonathan Hong <br />
+Team members: 
+
+Justin May:  https://github.com/justinmay <br />
+Salman Omer: https://github.com/salman-omer <br />
+Yash Shah: https://github.com/shahhyash <br />
+Skyler Lee: https://github.com/Only16Characters <br />
+Jonathan Hong: https://github.com/hejeong <br />
 
 
 Popular play-along music games, such as “Guitar Hero” and “Rock Band”, currently allow users to play along in real time to a song using a controller designed to mimic an actual instrument. For example, the guitar controller has five colored buttons that are to be pressed in different combinations using the left hand, and a strum bar to be pressed by your right hand to imitate strumming. The players are then given a visual aid of five vertical lines, each line corresponding to a button for the left hand. Bubbles automatically scroll down these lines and the player must be pressing the correct buttons with their left hand while hitting the strum bar with their right. While users may learn and gain a stronger intuition of some musical concepts such as rhythm, the skills required to play these games will not translate into playing the actual corresponding instrument because of how simplified the controller is. <br />
