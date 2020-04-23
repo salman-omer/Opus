@@ -35,3 +35,6 @@ Final Project Report is currently under works. It will be fully prepared in time
 
 Deep Learning Considerations: <br />
 https://docs.google.com/document/d/1PLDvvPvsz-DQcnQ9AgptQ8enyhh4AYGp2_As62TphpA/edit?usp=sharing
+
+# References <br />
+"Multiple Pitch Estimation Based on Modified Harmonic Product Spectrum" - https://www.researchgate.net/publication/288541228_Multiple_Pitch_Estimation_Based_on_Modified_Harmonic_Product_Spectrum
