@@ -11,9 +11,7 @@ Jonathan Hong: https://github.com/hejeong <br />
 
 
 Check out our project overview and presentation! <br />
-[![Alt text](https://img.youtube.com/vi/Saf03aXb4ww/0.jpg)](https://www.youtube.com/watch?v=Saf03aXb4ww)<br />
-
-
+[![Alt text](https://img.youtube.com/vi/8EL5aQHDwsk/0.jpg)](https://www.youtube.com/watch?v=8EL5aQHDwsk)<br />
 
 # Abstract <br />
 
