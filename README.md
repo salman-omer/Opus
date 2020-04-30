@@ -29,7 +29,7 @@ If you have changed code from the Unity project and need to compile to Xcode, yo
 
 # Supporting Documents <br />
 
-Final Project Report is currently under works. It will be fully prepared in time for the expo on April 29th. <br />
+Final Project Report is currently under works. It will be fully prepared by May 7th. <br />
 
 Deep Learning Considerations: <br />
 https://docs.google.com/document/d/1PLDvvPvsz-DQcnQ9AgptQ8enyhh4AYGp2_As62TphpA/edit?usp=sharing
