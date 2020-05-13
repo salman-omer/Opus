@@ -10,7 +10,10 @@ Skyler Lee: https://github.com/Only16Characters <br />
 Jonathan Hong: https://github.com/hejeong <br />
 
 
-Check out our project overview and presentation! <br />
+Check out the game trailer! <br />
+[![Alt text](https://img.youtube.com/vi/Gv2rCLRoPAU/0.jpg)](https://www.youtube.com/watch?v=Gv2rCLRoPAU)<br />
+
+Check out our technical project overview and presentation! <br />
 [![Alt text](https://img.youtube.com/vi/8EL5aQHDwsk/0.jpg)](https://www.youtube.com/watch?v=8EL5aQHDwsk)<br />
 
 # Abstract <br />
