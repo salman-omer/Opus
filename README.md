@@ -32,9 +32,10 @@ If you have changed code from the Unity project and need to compile to Xcode, yo
 
 # Supporting Documents <br />
 
-Final Project Report is currently under works. It will be fully prepared by May 7th. <br />
+Final Project Report: <br />
+https://docs.google.com/document/d/1aU4PAKR6TOVrQj9y5ahe2G3Nm-zroOU4/edit?usp=sharing&ouid=105434239394631484819&rtpof=true&sd=true
 
-Deep Learning Considerations: <br />
+Deep Learning Considerations Section (Also included in final report): <br />
 https://docs.google.com/document/d/1PLDvvPvsz-DQcnQ9AgptQ8enyhh4AYGp2_As62TphpA/edit?usp=sharing
 
 # References <br />
